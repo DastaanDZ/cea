@@ -12,7 +12,9 @@ export const useInterviewStore = create<InterviewStore>((set) => ({
   twoInterviews: [],
   addInterviews: async () => {
     try {
-      const res = await fetch("http://localhost:3000/api/interviews");
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_DOMAIN}/api/interviews`
+      );
       if (!res.ok) {
         throw new Error("Failed to fetch data");
       }

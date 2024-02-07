@@ -12,7 +12,7 @@ export const useActivityStore = create<ActivityStore>((set) => ({
   twoActivities: [],
   addActivities: async () => {
     try {
-      const res = await fetch("http://localhost:3000/api/activity");
+      const res = await fetch(`${process.env.NEXT_PUBLIC_DOMAIN}/api/activity`);
       if (!res.ok) {
         throw new Error("Failed to fetch data");
       }

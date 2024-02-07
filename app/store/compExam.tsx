@@ -10,7 +10,7 @@ export const useCompExamStore = create<CompetitiveExamStore>((set) => ({
   compExam: [],
   addCompetitiveExam: async () => {
     try {
-      const res = await fetch("http://localhost:3000/api/compExam");
+      const res = await fetch(`${process.env.NEXT_PUBLIC_DOMAIN}/api/compExam`);
       if (!res.ok) {
         throw new Error("Failed to fetch data");
       }

@@ -11,6 +11,7 @@ export const useResourceStore = create<ResourceStore>((set) => ({
   addResources: async () => {
     try {
       const res = await fetch(`${process.env.NEXT_PUBLIC_DOMAIN}/api/resource`);
+
       if (!res.ok) {
         throw new Error("Failed to fetch data");
       }

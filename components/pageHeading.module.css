@@ -24,14 +24,23 @@
 }
 @media (max-width: 480px) {
   .pageHeading {
-    font-size: 36px;
+    font-size: 45px;
     font-weight: 700;
     line-height: 45px;
   }
 }
 @media (max-width: 400px) {
+  .pageHeading{
+    font-size: 40px;
+  }
 }
 @media (max-width: 360px) {
+  .pageHeading{
+    font-size: 35px;
+  }
 }
 @media (max-width: 320px) {
+  .pageHeading{
+    font-size: 30px;
+  }
 }

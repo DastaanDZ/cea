@@ -36,7 +36,6 @@ export const BillboardForm: React.FC = () => {
   const onSubmit: SubmitHandler<BillboardFormValues> = async (data) => {
     const linkData = [
       {
-        name: "url",
         link: url,
       },
     ];

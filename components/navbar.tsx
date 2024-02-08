@@ -20,15 +20,16 @@ export const Navbar = () => {
     <>
       <div className={styles.navDiv}>
         <Link href={"/"}>
-          <h1 className={styles.colorText}>CEA.</h1>
+          {/* <h1 className={styles.colorText}>CEA.</h1> */}
+          <img src="/cea.png" height="50px" />
         </Link>
         <div className={styles.navMenu}>
           <div className={styles.navlinks}>
             <a href="/">Home.</a>
-            <a href="/activity">Activity.</a>
+            <a href="/activity">Activities.</a>
             <a href="/resources">Resources.</a>
             <a href="/interviews">Interviews</a>
-            <a href="/compExam">CompExam.</a>
+            <a href="/compExam">CompExams.</a>
           </div>
           <a href="" className={styles.mainDiv}>
             {/* <div className={styles.buttonDiv}>

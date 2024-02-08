@@ -40,6 +40,7 @@ export default async function Home() {
     return (
       <>
         {/* <div>Hello {user?.emailAddresses[0].emailAddress}!</div> */}
+        {/* <UserButton afterSignOutUrl="/" /> */}
         <HomePage />
         <div className={styles.seperator}></div>
         <OurExperience />

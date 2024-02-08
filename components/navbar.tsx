@@ -9,6 +9,7 @@ import { MenuBtn } from "./MenuBtn";
 import Image from "next/image";
 import arrow from "../public/Arrow 1.png";
 import Link from "next/link";
+import { UserButton } from "@clerk/nextjs";
 
 export const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
@@ -31,6 +32,7 @@ export const Navbar = () => {
             <a href="/interviews">Interviews</a>
             <a href="/compExam">CompExam.</a>
           </div>
+          <UserButton afterSignOutUrl="/" />
           <a href="" className={styles.mainDiv}>
             {/* <div className={styles.buttonDiv}>
               Sign In

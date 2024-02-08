@@ -336,7 +336,7 @@ export const InterviewForm: React.FC<InterviewFormProps> = ({
               <span className={styles.checkmark}></span>I hereby confirm that
               all information provided by me is accurate.
             </label>
-            <input type="submit" />
+            <input type="submit" className={styles.button} />
             {/* <a type="submit" href="" className={styles.mainDiv}>
               <div className={styles.buttonDiv}>SUBMIT</div>
               <div className={styles.colorDiv}></div>

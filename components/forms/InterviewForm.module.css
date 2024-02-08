@@ -127,6 +127,10 @@
   }
 }
 
+.button {
+  height: max-content;
+}
+
 .checkContainer {
   display: block;
   position: relative;

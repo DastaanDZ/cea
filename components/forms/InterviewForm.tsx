@@ -61,7 +61,7 @@ export const InterviewForm: React.FC<InterviewFormProps> = ({
     });
 
   const notifyWarning = (text: string) =>
-    toast.warn(`${text} has not been uploaded`, {
+    toast.warn(`${text}`, {
       position: "top-right",
       autoClose: 5000,
       hideProgressBar: false,
@@ -167,33 +167,42 @@ export const InterviewForm: React.FC<InterviewFormProps> = ({
 
     console.log(finalData);
 
-    if (profileUrl !== "" && logoUrl !== "") {
-      // console.log("FOUNDDDDDDDDDD!!!!!!!!!!!");
+    if (
+      data.rollno.endsWith("ce") &&
+      data.email.endsWith("ce@nitc.ac.in") &&
+      recordedEmail?.endsWith("ce@nitc.ac.in") &&
+      data.rollno.length == 9
+    ) {
+      if (profileUrl !== "" && logoUrl !== "") {
+        // console.log("FOUNDDDDDDDDDD!!!!!!!!!!!");
 
-      try {
-        await axios.post("/api/interviews", finalData);
-        notifySuccess("Experience");
-        // Reset the form after a successful submission
-      } catch (error: any) {
-        if (error.response.data === "email") {
-          console.log(error.response.data);
-          notifyError(error.response.data);
-        } else if (error.response.data === "rollno") {
-          console.log(error.response.data);
-          notifyError(error.response.data);
-        } else if (error.response.data === "phone") {
-          console.log(error.response.data);
-          notifyError(error.response.data);
-        } else {
-          console.log(error);
-          notifyError("Something has went wrong");
+        try {
+          await axios.post("/api/interviews", finalData);
+          notifySuccess("Experience");
+          // Reset the form after a successful submission
+        } catch (error: any) {
+          if (error.response.data === "email") {
+            console.log(error.response.data);
+            notifyError(error.response.data);
+          } else if (error.response.data === "rollno") {
+            console.log(error.response.data);
+            notifyError(error.response.data);
+          } else if (error.response.data === "phone") {
+            console.log(error.response.data);
+            notifyError(error.response.data);
+          } else {
+            console.log(error);
+            notifyError("Something has went wrong");
+          }
         }
+      } else if (profileUrl === "") {
+        console.log("profile or logo url missing");
+        notifyWarning("Profile Photo");
+      } else if (logoUrl === "") {
+        notifyWarning("Logo");
       }
-    } else if (profileUrl === "") {
-      console.log("profile or logo url missing");
-      notifyWarning("Profile Photo");
-    } else if (logoUrl === "") {
-      notifyWarning("Logo");
+    } else {
+      notifyWarning("Not a civil student");
     }
   };
 

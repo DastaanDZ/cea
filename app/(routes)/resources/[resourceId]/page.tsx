@@ -35,7 +35,7 @@ export default async function ResourceMaterial({
           <div className={styles.titleImage}>
             <MdOutlineLibraryBooks
               className={styles.icons}
-              style={{ backgroundColor: "inherit" }}
+              style={{ backgroundColor: "transparent" }}
             />
           </div>
           <div className={styles.titleContent}>{resource?.subTitle}</div>

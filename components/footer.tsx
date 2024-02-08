@@ -21,9 +21,19 @@ export const Footer = () => {
             other ways to solve the same problem.
           </p>
           <div className={styles.socialMediaIconContainer}>
-            <FaGithub className={styles.icon} />
-            <FaInstagram className={styles.icon} />
-            <FaLinkedin className={styles.icon} />
+            {/* <FaGithub className={styles.icon} /> */}
+            <a
+              href="https://www.instagram.com/cea_nitc_?igsh=MWw0ODByM21uOTVlNQ=="
+              target="_blank"
+            >
+              <FaInstagram className={styles.icon} />
+            </a>
+            <a
+              href="https://www.linkedin.com/company/cea-nitc/"
+              target="_blank"
+            >
+              <FaLinkedin className={styles.icon} />
+            </a>
           </div>
         </div>
         <div className={styles.linksContainer}>

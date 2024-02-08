@@ -28,35 +28,37 @@ export default function InterviewExpPage() {
 
   return (
     <>
-      <div className={styles.maindiv}>
-        <PageTopHeading
-          mainHeading="Get to Know about different competitive Examination and Learn."
-          heading="RESOURCES."
-          subHeading="MATERIALS."
-        />
+      <div className={styles.container}>
+        <div className={styles.maindiv}>
+          <PageTopHeading
+            mainHeading="Get to Know about different competitive Examination and Learn."
+            heading="RESOURCES."
+            subHeading="MATERIALS."
+          />
 
-        <div className={styles.buttonsDiv}>
-          <a href="/form" className={styles.mainDiv}>
-            <div className={styles.buttonDiv}>
-              Share Your Own Experience
-              <div className={styles.arrowDiv}>
-                <Image src={arrow} alt="" className={styles.arrowButton} />
+          <div className={styles.buttonsDiv}>
+            <a href="/form" className={styles.mainDiv}>
+              <div className={styles.buttonDiv}>
+                Share Your Own Experience
+                <div className={styles.arrowDiv}>
+                  <Image src={arrow} alt="" className={styles.arrowButton} />
+                </div>
               </div>
-            </div>
-            <div className={styles.colorDiv}></div>
-          </a>
-        </div>
+              <div className={styles.colorDiv}></div>
+            </a>
+          </div>
 
-        <div className={styles.cardholder}>
-          {interviews.length === 0 ? (
-            <Loader />
-          ) : (
-            interviews.map((data: InterviewExp) => (
-              <Link href={`/interviews/${data.id}`} key={data.id}>
-                <InterviewCard key={data.id} {...data} />
-              </Link>
-            ))
-          )}
+          <div className={styles.cardholder}>
+            {interviews.length === 0 ? (
+              <Loader />
+            ) : (
+              interviews.map((data: InterviewExp) => (
+                <Link href={`/interviews/${data.id}`} key={data.id}>
+                  <InterviewCard key={data.id} {...data} />
+                </Link>
+              ))
+            )}
+          </div>
         </div>
       </div>
     </>

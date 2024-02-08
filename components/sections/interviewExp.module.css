@@ -1,3 +1,6 @@
+.container{
+  padding: 0 4rem;
+}
 .maindiv {
   color: white;
   display: flex;
@@ -18,26 +21,6 @@
 .seperator{
   margin: 3rem 0;
 }
-@media (max-width: 1366px) {
-  .cardholder {
-    gap: 5rem;
-  }
-}
-@media (max-width: 1200px) {
-  .cardholder {
-    gap: 2rem;
-  }
-}
-@media (max-width: 1024px) {
-  .cardholder {
-    flex-direction: column;
-    gap: 10rem;
-  }
-}
-@media (max-width: 900px) {
-}
-@media (max-width: 768px) {
-}
 
 .buttonsDiv {
   display: flex;
@@ -47,11 +30,13 @@
   margin-top: 1.25rem;
   background: transparent;
   margin-bottom: 10.8rem;
+  /* width: 100%; */
 }
 .mainDiv {
   display: flex;
   position: relative;
   text-decoration: none;
+  /* width: 100%; */
 }
 .buttonDiv {
   color: black;
@@ -129,5 +114,67 @@
   }
   100% {
     transform: translate(0%, 0%);
+  }
+}
+
+
+@media (max-width: 1366px) {
+  .cardholder {
+    gap: 5rem;
+  }
+}
+@media (max-width: 1200px) {
+  .cardholder {
+    gap: 2rem;
+  }
+  .container{
+    padding: 0 3rem;
+  }
+}
+@media (max-width: 1024px) {
+  .cardholder {
+    flex-direction: column;
+    gap: 10rem;
+  }
+  .container{
+    padding: 0 2rem;
+  }
+}
+@media (max-width: 900px) {
+  .buttonsDiv{
+    width: 100%;
+  }
+  .mainDiv{
+    width: 100%;
+  }
+  .buttonDiv{
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .container{
+    padding: 0 2rem;
+  }
+  .buttonDiv{
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .container{
+    padding: 0 1rem;
+  }
+  .buttonDiv{
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 400px) {
+  .buttonDiv{
+    font-size: 1.3rem;
+  }
+}
+@media (max-width: 350px) {
+  .buttonDiv{
+    font-size: 1rem;
   }
 }

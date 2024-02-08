@@ -3,7 +3,7 @@
   flex: 1;
   flex-wrap: wrap;
   max-width: 82rem;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   margin-top: 3.125rem;
   gap: 3rem;

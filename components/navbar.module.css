@@ -17,6 +17,10 @@
     rgba(26, 26, 26, 0)
   );
 }
+.hidden{
+  width: 100vw;
+  height: 3rem;
+}
 .heading{
   width: 100vw;
   height: 3rem;

@@ -29,7 +29,16 @@ export default function RootLayout({
         }}
       >
         <html lang="en">
-          <body className={sora.className}>
+          <body
+            className={sora.className}
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              flexDirection: "column",
+              alignItems: "center",
+              minHeight: "100vh",
+            }}
+          >
             <ToastContainer
               position="top-right"
               autoClose={5000}

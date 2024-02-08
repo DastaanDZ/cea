@@ -23,7 +23,7 @@ export const Navbar = () => {
       <div className={styles.navDiv}>
         <Link href={"/"}>
           {/* <h1 className={styles.colorText}>CEA.</h1> */}
-          <img src="/cea.png" height="50px" />
+          <img src="/cea.png" height="28px" />
         </Link>
         <div className={styles.navMenu}>
           <div className={styles.navlinks}>

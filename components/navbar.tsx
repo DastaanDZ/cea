@@ -18,6 +18,7 @@ export const Navbar = () => {
   };
   return (
     <>
+      <div className={styles.hidden}></div>
       <div className={styles.navDiv}>
         <Link href={"/"}>
           <h1 className={styles.colorText}>CEA.</h1>

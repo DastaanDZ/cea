@@ -45,7 +45,11 @@ export default function ResourcesPage() {
           <Loader />
         ) : (
           resources.map((resource) => (
-            <Link href={`/resources/${resource.id}`} key={resource.id}>
+            <Link
+              href={`/resources/${resource.id}`}
+              key={resource.id}
+              style={{ width: "100%" }}
+            >
               <Card {...resource} />
             </Link>
           ))

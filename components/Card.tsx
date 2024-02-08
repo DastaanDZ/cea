@@ -44,12 +44,21 @@ export const Card: React.FC<Resources | CompetitiveExam> = (card) => {
         </div>
       </div>
 
-      <Link className={styles.cardBottom} style={{ color: bgColor }} href="#">
-        Know More{"  "}
+      <Link
+        className={styles.cardBottom}
+        style={{ color: bgColor }}
+        href={`/${
+          card.type === "core" || card.type === "coding"
+            ? "resources"
+            : "compExam"
+        }/${card.id}`}
+      >
+        Know More{" "}
         <FaArrowRight
           style={{ backgroundColor: "inherit", marginLeft: "9px" }}
         />
       </Link>
+
       {/* <RightArrowButton text="Know More" redirectLink="#" /> */}
       <div className={styles.glow1}></div>
       <div className={styles.glow2}></div>

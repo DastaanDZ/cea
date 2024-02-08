@@ -17,6 +17,10 @@
     rgba(26, 26, 26, 0)
   );
 }
+.heading{
+  width: 100vw;
+  height: 3rem;
+}
 .colorText {
   font-weight: 700;
   font-size: 1.5rem;

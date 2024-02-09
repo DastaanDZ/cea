@@ -190,13 +190,13 @@
     letter-spacing: 0.1rem;
   }
   .materials {
-    width: 17.375rem;
-    height: 2.875rem;
+    width: 18.375rem;
+    height: 3.875rem;
     gap: 0.78rem;
   }
   .syllabus {
-    width: 11.563rem;
-    height: 2.875rem;
+    width: 12.563rem;
+    height: 3.875rem;
   }
 
   .heading {
@@ -234,7 +234,7 @@
     padding: 2rem 1rem;
   }
   .materials {
-    width: 17.375rem;
+    width: 15rem;
     height: 2.5rem;
   }
   .syllabus {
@@ -254,11 +254,13 @@
     width: 1.375rem;
   }
   .materialTitle {
-    line-height: 1.875rem;
+    line-height: 1.2rem;
+    font-size: 1.1rem;
     letter-spacing: 0;
   }
   .syllabusTitle {
     line-height: 1.2rem;
+    font-size: 1.1rem;
     letter-spacing: 0;
   }
 }

@@ -32,9 +32,9 @@ export const OurExperience = () => {
             <h1 className={styles.colorText}>OFFERINGS</h1>
           </div>
           <div className={styles.headingContainer}>
-            <h2 className={styles.kind}>EVENT.</h2>
-            <h2 className={styles.kind}>WORKSHOP.</h2>
-            <h2 className={styles.kind}>LECTURE.</h2>
+            <h2 className={styles.kind}>EVENTS.</h2>
+            <h2 className={styles.kind}>WORKSHOPS.</h2>
+            <h2 className={styles.kind}>LECTURES.</h2>
           </div>
         </div>
         <div className={styles.cardMainDiv}>

@@ -3,9 +3,10 @@
   flex-direction: column;
   gap: 2.25rem;
   justify-content: center;
-  overflow: hidden;
+  overflow-x: clip;
   align-items: center;
   max-width: 100vw;
+  overflow-y: visible;
 }
 .strips {
   position: relative;

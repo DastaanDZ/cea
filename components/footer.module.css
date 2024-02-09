@@ -284,6 +284,7 @@
 @media (max-width: 1366px) {
   .container {
     padding: 0 6rem;
+    justify-content: center;
   }
   .bottom {
     padding: 2rem 6rem;
@@ -313,6 +314,10 @@
 
 @media (max-width: 1024px) {
   .container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .container {
     padding: 0 2rem;
   }
   .bottom {
@@ -328,10 +333,6 @@
 }
 
 @media (max-width: 758px) {
-  .container {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
   .infoContainer {
     margin-bottom: 2rem;
     width: 300px;

@@ -26,7 +26,7 @@ export default function ResourcesPage() {
   return (
     <div className={styles.container}>
       <PageTopHeading
-        mainHeading="Get to Know about different competitive Examination and Learn."
+        mainHeading="Get to Know about different resources and Learn."
         heading="RESOURCES."
         subHeading="MATERIALS."
       />

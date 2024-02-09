@@ -33,6 +33,7 @@ export default async function InterviewExp({
           marginRight: "0.3rem",
           marginBottom: "0.5rem",
           marginTop: "0.5rem",
+          background: "transparent",
         }}
         size={30}
       />

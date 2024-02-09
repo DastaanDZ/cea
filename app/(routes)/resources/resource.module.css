@@ -32,6 +32,7 @@
   max-width: 82rem;
   justify-content: space-between !important;
   align-items: center;
+  background: transparent;
   margin-top: 3.125rem;
   z-index: 1;
   gap: 2.25rem;

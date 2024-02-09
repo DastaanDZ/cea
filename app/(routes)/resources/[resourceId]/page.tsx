@@ -41,7 +41,7 @@ export default async function ResourceMaterial({
           <div className={styles.titleContent}>{resource?.subTitle}</div>
         </div>
         <div className={styles.content}>
-          <div>{resource?.desc}</div>
+          <div style={{ background: "transparent" }}>{resource?.desc}</div>
         </div>
       </div>
 

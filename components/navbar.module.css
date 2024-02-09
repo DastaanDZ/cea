@@ -17,6 +17,10 @@
     rgba(26, 26, 26, 0)
   );
 }
+.logo{
+  height: 28px;
+  background: transparent;
+}
 .hidden{
   width: 100vw;
   height: 3rem;

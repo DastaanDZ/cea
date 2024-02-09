@@ -3,7 +3,7 @@
   flex: 1;
   width: 100%;
   height: 4.125rem;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   gap: 3rem;
   /* max-width: 660px; */
@@ -11,11 +11,21 @@
   z-index: 1;
 }
 
-@media (min-width: 1440px) {
-  .searchBar {
-    justify-content: center;
-  }
+.inputWrapper {
+  height: 4rem;
+  border-radius: 4px;
+  background: #303030;
+  display: flex;
+  align-items: center;
+  padding: 0.8rem 1.8rem 0.8rem 1.8rem;
+  width: 31.8rem;
 }
+
+.inputWrapper input{
+  height: 100%;
+}
+
+
 
 .inputContainer {
   display: flex;
@@ -43,15 +53,21 @@
 }
 
 .icons {
-  height: 41.25px;
-  width: 41.25px;
+  height: 100%;
+  width: 100%;
   color: #afafaf;
   background-color: #262628;
 }
 
+@media (min-width: 1440px) {
+  .searchBar {
+    /* justify-content: center; */
+  }
+}
+
 @media (max-width: 1366px) {
   .searchBar {
-    justify-content: center;
+    /* justify-content: center; */
   }
   .inputContainer {
     max-width: 33rem;
@@ -60,16 +76,25 @@
 
 @media (max-width: 1220px) {
   .searchBar {
-    justify-content: center;
+    /* justify-content: center; */
   }
   .inputContainer {
     max-width: 33rem;
+  }
+  .inputWrapper {
+    padding: 0.6rem 1.5rem 0.6rem 1.5rem;
+  }
+}
+
+@media( max-width: 1024px){
+  .inputWrapper {
+    padding: 0.5rem 1.4rem 0.5rem 1.4rem;
   }
 }
 
 @media (max-width: 768px) {
   .searchBar {
-    justify-content: center;
+    /* justify-content: center; */
     gap: 1.25rem;
   }
   .inputContainer {
@@ -77,14 +102,26 @@
     max-width: 14.875rem;
   }
   .iconContainer {
-    height: 2.579rem;
-    width: 2.579rem;
+    height: 3rem;
+    width: 3rem;
   }
   .icons {
-    height: 25.79px;
-    width: 25.79px;
+    height: 100%;
+    width: 100%;
+  }
+  .inputWrapper {
+    padding: 0.5rem 1.2rem 0.5rem 1.2rem;
+    width: 100%;
+    height: 3rem;
   }
 }
+
+@media (max-width: 550px) {
+  .inputWrapper {
+    padding: 0.5rem 1rem 0.5rem 1rem;
+  }
+}
+
 
 @media (max-width: 480px) {
   .searchBar {

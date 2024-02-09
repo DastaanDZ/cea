@@ -29,7 +29,7 @@ export const SearchBar = () => {
 
   return (
     <div className={styles.searchBar}>
-      <div className={styles.inputContainer}>
+      {/* <div className={styles.inputContainer}>
         <input
           type="text"
           className={styles.input}
@@ -37,7 +37,12 @@ export const SearchBar = () => {
           placeholder="Search Exams"
           name="name"
         />
+      </div> */}
+
+      <div className={styles.inputWrapper}>
+        <input type="text" placeholder="Search Exams" name="name" />
       </div>
+
       <div className={styles.iconContainer}>
         <CiFilter className={styles.icons} />
       </div>

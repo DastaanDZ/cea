@@ -37,6 +37,8 @@ export default function RootLayout({
               flexDirection: "column",
               alignItems: "center",
               minHeight: "100vh",
+              maxWidth: "100vw",
+              overflowX: "hidden",
             }}
           >
             <ToastContainer

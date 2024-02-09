@@ -20,6 +20,7 @@
   justify-content: center;
   align-items: flex-start;
   /* gap: 2rem; */
+  border-radius: 1rem;
 }
 
 .profile {
@@ -89,7 +90,7 @@
   background-color: inherit;
 }
 
-.mobileHeader{
+.mobileHeader {
   display: none;
 }
 
@@ -135,7 +136,6 @@
   align-items: center;
   background-color: #313131;
   margin-left: 1rem;
-
 }
 
 .companyLogo {
@@ -148,7 +148,7 @@
   background-color: #313131;
 }
 
-.companyLogo img{
+.companyLogo img {
   height: 100%;
   width: 100%;
 }
@@ -175,44 +175,44 @@
   font-weight: 500;
   color: #afafaf;
 }
-.moreInfoContainer{
+.moreInfoContainer {
   display: flex;
   flex-wrap: wrap;
   /* justify-content: space-between; */
   background: transparent;
   gap: 1rem;
 }
-.moreInfo{
+.moreInfo {
   display: flex;
   background: transparent;
   gap: 1rem;
 }
-.moreInfo p:nth-child(1){
-  color: #F8C733;
+.moreInfo p:nth-child(1) {
+  color: #f8c733;
   font-size: 1.25rem;
 }
-.moreInfo p:nth-child(2){
+.moreInfo p:nth-child(2) {
   color: white;
   font-size: 1.25rem;
 }
 
-@media(max-width: 1024px) {
-  .mainContainer{
+@media (max-width: 1024px) {
+  .mainContainer {
     padding: 0 2rem;
   }
 }
 
 @media (max-width: 900px) {
-  .heading{
+  .heading {
     display: none;
   }
 
-  .mobileHeader{
+  .mobileHeader {
     display: flex;
-  justify-content: space-between;
-  align-items: stretch;
-  background-color: inherit;
-  width: 100%;
+    justify-content: space-between;
+    align-items: stretch;
+    background-color: inherit;
+    width: 100%;
   }
   .mainContainer {
     max-width: none;
@@ -247,10 +247,12 @@
 }
 
 @media (max-width: 550px) {
-
   .mainContainer {
     max-width: none;
     padding: 0 1rem;
+  }
+  .container {
+    border-radius: 0.5rem;
   }
   .title {
     font-size: 24px;
@@ -304,13 +306,13 @@
     font-size: 18px;
     line-height: 27px;
   }
-  .container{
+  .container {
     padding: 2rem;
   }
-  .moreInfo p{
+  .moreInfo p {
     font-size: 1rem;
   }
-  .companyLogo{
+  .companyLogo {
     width: 54px;
     height: auto;
   }

@@ -51,7 +51,7 @@ export const Footer = () => {
           </ul>
         </div>
         <div className={styles.contactContainer}>
-          <p>STAY UP TO DATE</p>
+          <p style={{ padding: "0 2rem" }}>STAY UP TO DATE</p>
           <h3>Get Our Newsletter</h3>
           <div className={styles.inputBtnContainer}>
             <input type="email" placeholder="Your Email" />

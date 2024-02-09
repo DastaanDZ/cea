@@ -32,8 +32,8 @@ export default function InterviewExpPage() {
         <div className={styles.maindiv}>
           <PageTopHeading
             mainHeading="Get to Know about different competitive Examination and Learn."
-            heading="RESOURCES."
-            subHeading="MATERIALS."
+            heading="TESTIMONIALS."
+            subHeading="INTERVIEW EXP."
           />
 
           <div className={styles.buttonsDiv}>

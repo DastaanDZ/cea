@@ -260,7 +260,7 @@
     padding: 2px 2px;
   }
   .materials {
-    width: 17.375rem;
+    width: 15rem;
     height: 2.5rem;
   }
   .syllabus {
@@ -282,11 +282,13 @@
   }
   .materialTitle {
     line-height: 1.875rem;
+    font-size: 1.1rem;
     letter-spacing: 0;
     background: inherit;
   }
   .syllabusTitle {
     line-height: 1.2rem;
+    font-size: 1.1rem;
     letter-spacing: 0;
     background: inherit;
   }

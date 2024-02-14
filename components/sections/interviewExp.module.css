@@ -158,7 +158,11 @@
   .buttonDiv{
     font-size: 1.8rem;
   }
+  .buttonsDiv{
+    margin-bottom: 8.8rem;
+  }
 }
+
 
 @media (max-width: 550px) {
   .container{

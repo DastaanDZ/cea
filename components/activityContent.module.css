@@ -1,104 +1,137 @@
 .mainDiv {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 3rem;
-  }
-  .activeIdMain {
-    display: flex;
-    flex-direction: column;
-    gap: 2.25rem;
-    padding: 3rem;
-    border-radius: 1rem;
-    background-color: #313131;
-    max-width: 81.25rem;
-  }
-  .activeIdHead {
-    display: flex;
-    gap: 1.5rem;
-    background-color: transparent;
-  }
-  .activeIdHead h1 {
-    font-weight: 600;
-    font-size: 2.25rem;
-    color: #f8c733;
-    background-color: transparent;
-  }
-  .activeIdMain ul {
-    display: flex;
-    align-self: center;
-    justify-content: center;
-    gap: 7.5rem;
-    padding: 0 5.5rem;
-    background-color: transparent;
-  }
-  .activeIdMain ul li {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 0.75rem;
-    background-color: transparent;
-  }
-  .activeIdMain ul li h3 {
-    padding: 0.25rem 1.375rem;
-    border-radius: 0.25rem;
-    background-color: #afafaf;
-    font-weight: 400;
-    font-size: 1.125rem;
-    color: black;
-  }
-  .activeIdMain ul li p {
-    font-weight: 400;
-    font-size: 1.25rem;
-    color: white;
-    background-color: transparent;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+.activeIdMain {
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+  padding: 3rem;
+  border-radius: 1rem;
+  background-color: #313131;
+  max-width: 81.25rem;
+}
+.activeIdHead {
+  display: flex;
+  gap: 1.5rem;
+  background-color: transparent;
+}
+.activeIdHead h1 {
+  font-weight: 600;
+  font-size: 2.25rem;
+  color: #f8c733;
+  background-color: transparent;
+}
+.activeIdMain ul {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  gap: 7.5rem;
+  padding: 0 5.5rem;
+  background-color: transparent;
+}
+.activeIdMain ul li {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background-color: transparent;
+}
+.activeIdMain ul li h3 {
+  padding: 0.25rem 1.375rem;
+  border-radius: 0.25rem;
+  background-color: #afafaf;
+  font-weight: 400;
+  font-size: 1.125rem;
+  color: black;
+}
+.activeIdMain ul li p {
+  font-weight: 400;
+  font-size: 1.25rem;
+  color: white;
+  background-color: transparent;
+}
+.aboutMain {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 81.25rem;
+  background-color: #313131;
+  border-radius: 1rem;
+  margin: 0 1rem;
+}
+
+.aboutMain img {
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  background-color: transparent;
+}
+.aboutDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background-color: transparent;
+  padding: 0 4rem;
+}
+@media (max-width: 1336px) {
   .aboutMain {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-    justify-content: center;
-    max-width: 81.25rem;
-    background-color: #313131;
-    border-radius: 1rem;
-  }
-  .aboutMain img {
-    border-top-left-radius: 1rem;
-    border-bottom-left-radius: 1rem;
-    background-color: transparent;
+    flex-direction: column;
   }
   .aboutDiv {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    background-color: transparent;
-    padding: 0 4rem;
+    padding: 0 3rem;
   }
-  .aboutDiv h1 {
-    font-weight: 600;
-    font-size: 1.75rem;
-    color: #f8c733;
-    background-color: transparent;
+}
+
+@media (max-width: 768px) {
+  .aboutDiv {
+    padding: 0 2rem;
   }
-  .aboutDiv p {
-    font-weight: 400;
-    font-size: 1rem;
-    background-color: transparent;
-    opacity: 50%;
-    color: white;
-    text-align: justify;
+}
+
+@media (max-width: 550) {
+  .aboutDiv {
+    padding: 0 1rem;
   }
-  .buttonDiv {
-    display: flex;
-    justify-content: flex-end;
-    background-color: transparent;
+  .aboutMain {
+    margin: 0;
   }
-  .aboutDiv button {
-    padding: 0.55rem 2.3rem;
-    background-color: white;
-    color: black;
+  .image {
+    width: 100%;
+    height: 100%;
   }
-  
+  .img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.aboutDiv h1 {
+  font-weight: 600;
+  font-size: 1.75rem;
+  color: #f8c733;
+  background-color: transparent;
+}
+.aboutDiv p {
+  font-weight: 400;
+  font-size: 1rem;
+  background-color: transparent;
+  opacity: 50%;
+  color: white;
+  text-align: justify;
+}
+.buttonDiv {
+  display: flex;
+  justify-content: flex-end;
+  background-color: transparent;
+  padding: 1rem;
+}
+.aboutDiv button {
+  padding: 0.55rem 2.3rem;
+  background-color: white;
+  color: black;
+}

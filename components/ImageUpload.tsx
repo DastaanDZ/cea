@@ -32,7 +32,10 @@ export const ImageUpload: React.FC<ImageUploadProps> = ({
         {({ open }) => {
           return (
             <button onClick={() => open()} className={styles.upload}>
-              <MdOutlineDriveFolderUpload size={25} />
+              <MdOutlineDriveFolderUpload
+                size={25}
+                style={{ background: "transparent" }}
+              />
               {text}
               {isUploaded && <TiTick color="green" size={25} />}
             </button>

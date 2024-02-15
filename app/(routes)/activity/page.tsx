@@ -30,6 +30,10 @@ export default function ActivityPage() {
       />
       <div className={styles.imageContainer}>
         <img src="/prithvi.png" className={styles.image} alt="event_img" />
+        <p>
+          Build your expertise with our immersive workshops and dynamic events,
+          shaping the future of civil engineering excellence together.
+        </p>
       </div>
 
       <div className={styles.cardContainer}>

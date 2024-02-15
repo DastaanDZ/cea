@@ -37,8 +37,9 @@ export const OurExperienceCard: React.FC<any> = (data) => {
           <div className={styles.linkDiv}>
             {/* <Image src={linkdin} alt="" className={styles.circleImage} /> */}
             <RiInstagramFill
-              style={{ background: "transparent", color: "#afafaf" }}
-              size={25}
+              // style={{ background: "transparent", color: "#afafaf" }}
+              className={styles.insta}
+              // size={25}
             />
           </div>
           {/* <div className={styles.linkDiv}>

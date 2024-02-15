@@ -127,6 +127,9 @@
     border-top-left-radius: 0rem;
     border-bottom-left-radius: 0rem;
   }
+  .buttonDiv {
+    justify-content: center;
+  }
 }
 @media (max-width: 900px) {
   .aboutDiv {

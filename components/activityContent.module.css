@@ -1,26 +1,24 @@
 .aboutMain {
   display: flex;
   gap: 1rem;
-  /* align-items: center; */
   justify-content: center;
   max-width: 81.25rem;
   width: 100%;
-  background: url('/activityBg.png');
+  background: url("/activityBg.png");
   background-color: #313131;
   border-radius: 1rem;
 }
-.imgContentWrapper{
+.imgContentWrapper {
   display: flex;
   gap: 1rem;
-  align-items: center;
   justify-content: center;
   max-width: 81.25rem;
   width: 100%;
-  background: url('/activityBg.png');
+  background: url("/activityBg.png");
   background-color: #313131;
   border-radius: 1rem;
 }
-.aboutMain img {
+.img {
   width: 31.25rem;
   height: 31.25rem;
   border-top-left-radius: 1rem;
@@ -34,13 +32,14 @@
   background-color: transparent;
   padding: 2rem 4rem;
 }
-.aboutDiv h1, .mobileAbout {
+.aboutDiv h1,
+.mobileAbout {
   font-weight: 600;
   font-size: 1.75rem;
   color: #f8c733;
   background-color: transparent;
 }
-.mobileAbout{
+.mobileAbout {
   display: none;
   margin-top: 2rem;
   text-align: left;
@@ -95,7 +94,7 @@
 @media (max-width: 1366px) {
 }
 @media (max-width: 1220px) {
-  .aboutMain img {
+  .img {
     height: 25rem;
   }
   .aboutDiv p {
@@ -107,60 +106,57 @@
     flex-direction: column;
     padding: 2rem 2rem;
   }
-  .imgContentWrapper{
+  .imgContentWrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
     background: inherit;
   }
-  .aboutMain img {
-    height: 31.25rem;
-    width: 31.25rem;
+  .img {
+    height: 100%;
+    width: 100%;
+    max-width: 25rem;
   }
-  .aboutDiv h1{
+  .aboutDiv h1 {
     display: none;
   }
-  .mobileAbout{
+  .mobileAbout {
     display: block;
+  }
+  .img {
+    border-top-left-radius: 0rem;
+    border-bottom-left-radius: 0rem;
   }
 }
 @media (max-width: 900px) {
+  .aboutDiv {
+    padding: 2rem 3rem;
+  }
 }
 @media (max-width: 768px) {
-  .aboutMain img {
-    height: 30rem;
-    width: 30rem;
+  .aboutDiv {
+    padding: 2rem 2rem;
   }
 }
 @media (max-width: 550px) {
-  .aboutMain img {
-    height: 26rem;
-    width: 26rem;
+  .aboutMain {
+    padding: 2rem 0rem;
+  }
+  .mobileAbout {
+    padding: 0rem 2rem;
+  }
+  .aboutDiv {
+    padding: 2rem 1.3rem;
   }
 }
 @media (max-width: 480px) {
-  .aboutMain img {
-    height: 21rem;
-    width: 21rem;
-  }
   .expand_btn::before {
     font-size: 0.6rem;
   }
-  .aboutDiv {
-    /* padding: 2rem 2rem; */
-  }
 }
 @media (max-width: 400px) {
-  .aboutMain img {
-    height: 18.6rem;
-    width: 18.6rem;
-  }
 }
 @media (max-width: 360px) {
-  .aboutMain img {
-    height: 16.1rem;
-    width: 16.1rem;
-  }
   .aboutDiv p {
     font-size: 0.8rem;
   }
@@ -169,11 +165,4 @@
   }
 }
 @media (max-width: 320px) {
-  .aboutMain img {
-    height: 13.5rem;
-    width: 13.5rem;
-  }
-  .aboutDiv {
-    /* padding: 2rem 1rem; */
-  }
 }

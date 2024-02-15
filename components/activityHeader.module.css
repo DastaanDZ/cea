@@ -23,9 +23,10 @@
   display: flex;
   flex-wrap: wrap;
   align-self: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 3rem;
   max-width: 64.188rem;
+  width: 100%;
   background-color: transparent;
 }
 .activeIdMain ul li {
@@ -58,6 +59,9 @@
 @media (max-width: 1220px) {
 }
 @media (max-width: 1024px) {
+  .activeIdMain ul {
+    justify-content: center;
+  }
 }
 @media (max-width: 900px) {
 }

@@ -4,9 +4,7 @@ export const ActivityContent = () => {
   return (
     <>
       <div className={styles.aboutMain}>
-        <div className={styles.image}>
-          <img src="/activity.png" className={styles.img} alt="" />
-        </div>
+        <img src="/activity.png" className={styles.img} alt="" />
         <div className={styles.aboutDiv}>
           <h1>ABOUT</h1>
           <p>

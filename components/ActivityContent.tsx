@@ -24,6 +24,7 @@ export const ActivityContent = () => {
             Ornare diam mattis eu nunc ornare erat. Vehicula ultricies orci,
             nunc vel. Vestibulum lacus, cursus tellus consectetur nisl lorem.
           </p>
+          <input className={styles.expand_btn} type="checkbox" />
           <div className={styles.buttonDiv}>
             <button>Register Now</button>
           </div>

@@ -1,104 +1,99 @@
-.mainDiv {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 3rem;
-  }
+.activeIdMain {
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+  padding: 3rem;
+  border-radius: 1rem;
+  background-color: #313131;
+  max-width: 81.25rem;
+  width: 100%;
+}
+.activeIdHead {
+  display: flex;
+  gap: 1.5rem;
+  background-color: transparent;
+}
+.activeIdHead h1 {
+  font-weight: 600;
+  font-size: 2.25rem;
+  color: #f8c733;
+  background-color: transparent;
+}
+.activeIdMain ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-self: center;
+  justify-content: center;
+  gap: 3rem;
+  max-width: 64.188rem;
+  background-color: transparent;
+}
+.activeIdMain ul li {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background-color: transparent;
+}
+.activeIdMain ul li h3 {
+  padding: 0.25rem 1.375rem;
+  border-radius: 0.25rem;
+  background-color: #afafaf;
+  font-weight: 400;
+  font-size: 1.125rem;
+  color: black;
+}
+.activeIdMain ul li p {
+  font-weight: 400;
+  font-size: 1.25rem;
+  color: white;
+  background-color: transparent;
+}
+@media (max-width: 1440px) {
+}
+@media (max-width: 1366px) {
+}
+@media (max-width: 1220px) {
+}
+@media (max-width: 1024px) {
+}
+@media (max-width: 900px) {
+}
+@media (max-width: 768px) {
+}
+@media (max-width: 550px) {
+}
+@media (max-width: 480px) {
   .activeIdMain {
-    display: flex;
-    flex-direction: column;
-    gap: 2.25rem;
-    padding: 3rem;
-    border-radius: 1rem;
-    background-color: #313131;
-    max-width: 81.25rem;
+    padding: 2rem;
+  }
+}
+@media (max-width: 400px) {
+  .activeIdHead h1 {
+    font-size: 2rem;
   }
   .activeIdHead {
-    display: flex;
-    gap: 1.5rem;
-    background-color: transparent;
+    gap: 1.4rem;
   }
+}
+@media (max-width: 360px) {
   .activeIdHead h1 {
-    font-weight: 600;
-    font-size: 2.25rem;
-    color: #f8c733;
-    background-color: transparent;
+    font-size: 1.8rem;
   }
-  .activeIdMain ul {
-    display: flex;
-    align-self: center;
-    justify-content: center;
-    gap: 7.5rem;
-    padding: 0 5.5rem;
-    background-color: transparent;
-  }
-  .activeIdMain ul li {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 0.75rem;
-    background-color: transparent;
-  }
-  .activeIdMain ul li h3 {
-    padding: 0.25rem 1.375rem;
-    border-radius: 0.25rem;
-    background-color: #afafaf;
-    font-weight: 400;
-    font-size: 1.125rem;
-    color: black;
-  }
-  .activeIdMain ul li p {
-    font-weight: 400;
-    font-size: 1.25rem;
-    color: white;
-    background-color: transparent;
-  }
-  .aboutMain {
-    display: flex;
+  .activeIdHead {
     gap: 1rem;
-    align-items: center;
-    justify-content: center;
-    max-width: 81.25rem;
-    background-color: #313131;
-    border-radius: 1rem;
   }
-  .aboutMain img {
-    border-top-left-radius: 1rem;
-    border-bottom-left-radius: 1rem;
-    background-color: transparent;
+}
+@media (max-width: 320px) {
+  .activeIdHead h1 {
+    font-size: 1.6rem;
   }
-  .aboutDiv {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    background-color: transparent;
-    padding: 0 4rem;
+  .activeIdHead {
+    gap: 0.6rem;
   }
-  .aboutDiv h1 {
-    font-weight: 600;
-    font-size: 1.75rem;
-    color: #f8c733;
-    background-color: transparent;
+  .activeIdMain {
+    padding: 1rem;
   }
-  .aboutDiv p {
-    font-weight: 400;
-    font-size: 1rem;
-    background-color: transparent;
-    opacity: 50%;
-    color: white;
-    text-align: justify;
-  }
-  .buttonDiv {
-    display: flex;
-    justify-content: flex-end;
-    background-color: transparent;
-  }
-  .aboutDiv button {
-    padding: 0.55rem 2.3rem;
-    background-color: white;
-    color: black;
-  }
-  
+}

@@ -18,8 +18,8 @@ export const Card: React.FC<Resources | CompetitiveExam> = (card) => {
     else bgColor = "#F8C733";
   }
 
-  console.log("Card Data");
-  console.log(card);
+  // console.log("Card Data");
+  // console.log(card);
 
   return (
     <div className={styles.container}>

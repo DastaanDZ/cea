@@ -1,50 +1,54 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { CiFilter } from "react-icons/ci";
 import styles from "./searchBar.module.css";
-// import { SearchBar } from './SearchBar';
+import { CompetitiveExam, Resources } from "@prisma/client";
 
-// interface SearchBarProps {
-//   data: any[];
-//   onChange: (filteredData: any[]) => void;
-// }
+interface SearchBarProps {
+  data: Resources[] | CompetitiveExam[];
+  onChange: (filteredData: any[]) => void;
+}
 
-// const getFilteredItems = (query: any, items: any[]): any[] => {
-//   if (!query) return items;
+export const SearchBar: React.FC<SearchBarProps> = ({ data, onChange }) => {
+  const [query, setQuery] = useState("");
+  const [clicked, setClicked] = useState(false);
 
-//   return items.filter((item) =>
-//     item.name.toLowerCase().includes(query.toLowerCase())
-//   );
-// };
+  const handleFilter = () => {
+    const filteredArr = data.filter((obj) =>
+      obj.title.toLowerCase().includes(query.toLowerCase())
+    );
 
-export const SearchBar = () => {
-  // const [query, setQuery] = useState("");
+    onChange(filteredArr);
+  };
 
-  // const inputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-  //   const newQuery = e.target.value;
-  //   setQuery(newQuery);
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      handleFilter();
+    }
+  };
 
-  //   const filteredItems = getFilteredItems(newQuery, data);
-  //   onChange(filteredItems);
-  // };
+  useEffect(() => {
+    if (clicked) {
+      handleFilter();
+    }
+  }, [clicked, query]);
 
   return (
     <div className={styles.searchBar}>
-      {/* <div className={styles.inputContainer}>
+      <div className={styles.inputWrapper}>
         <input
           type="text"
-          className={styles.input}
-          // onChange={inputChange}
           placeholder="Search Exams"
           name="name"
+          onChange={(e) => setQuery(e.target.value)}
+          onKeyDown={handleKeyDown}
         />
-      </div> */}
-
-      <div className={styles.inputWrapper}>
-        <input type="text" placeholder="Search Exams" name="name" />
       </div>
 
       <div className={styles.iconContainer}>
-        <CiFilter className={styles.icons} />
+        <CiFilter
+          className={styles.icons}
+          onClick={() => setClicked(!clicked)}
+        />
       </div>
     </div>
   );

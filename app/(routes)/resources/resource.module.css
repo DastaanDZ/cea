@@ -74,7 +74,7 @@
 @media (max-width: 768px) {
   .bigButtons {
     gap: 1.25rem;
-    max-width: 18.75rem;
+    /* max-width: 18.75rem; */
     justify-content: space-between;
   }
   .container {

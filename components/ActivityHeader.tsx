@@ -1,11 +1,14 @@
 import styles from "./activityHeader.module.css";
+import { FaBookmark } from "react-icons/fa";
 
 export const ActivityHeader = () => {
   return (
     <>
       <div className={styles.activeIdMain}>
         <div className={styles.activeIdHead}>
-          <img src="" alt="#" />
+          <div className={styles.bookmarkContainer}>
+            <FaBookmark className={styles.bookmark} />
+          </div>
           <h1>Prithvi ‘24</h1>
         </div>
         <ul>

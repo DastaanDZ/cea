@@ -6,7 +6,7 @@
 .glow6 {
   /* height: 100%; */
   width: 100%;
-  max-width: 930px;
+  max-width: 58.125rem;
   position: relative;
   background: transparent;
 }
@@ -30,20 +30,33 @@
   box-shadow: 2rem 1rem 4rem 4rem #f48fd04d;
 }
 
-.cardBottom {
-  display: flex;
+.container {
+  /* display: inline; */
+  /* border: 2px solid red; */
+  border-radius: 0.5rem;
+  width: 25rem;
+  height: 23.375rem;
+  z-index: 2;
   background-color: #262628;
-  color: #afafaf;
-  padding-left: 35px;
-  padding-top: 50px;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 20.16px;
-  text-decoration: none;
+  position: relative;
+  /* margin-bottom: 3.5rem; */
+  overflow: auto;
 }
 
-.cardBottom:hover {
-  text-decoration: underline;
+.cardContainer {
+  background-color: inherit;
+  display: flex;
+  flex-direction: column;
+  padding: 2.188rem;
+}
+
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: inherit;
+  /* padding: 35px 35px; */
+  border-radius: 0.5rem;
 }
 
 .cardMiddle {
@@ -52,44 +65,28 @@
   justify-content: space-between;
   background-color: #262628;
   color: #afafaf;
-  padding-left: 35px;
+  /* padding-left: 35px; */
   width: fit-content;
-  padding-top: 36px;
-  gap: 16px;
+  margin-top: 3.75rem;
+  /* padding-top: 36px; */
+  gap: 1rem;
 }
 
-.cardTop {
+.cardBottom {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: inherit;
-  padding: 35px 35px;
-  border-radius: 8px;
-}
-
-.container {
-  /* display: inline; */
-  /* border: 2px solid red; */
-  border-radius: 8px;
-  width: 25rem;
-  height: 374px;
-  z-index: 2;
   background-color: #262628;
-  position: relative;
-  /* margin-bottom: 3.5rem; */
-  overflow: auto;
+  color: #afafaf;
+  /* padding-left: 35px;
+  padding-top: 50px; */
+  margin-top: 3.75rem;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  text-decoration: none;
 }
 
-/* @media (max-width: 1366px) {
-  .container {
-    max-width: 24rem;
-  }
-} */
-
-@media (max-width: 1440px) {
-  .container {
-    width: 24rem;
-  }
+.cardBottom:hover {
+  text-decoration: underline;
 }
 
 .headingOne {
@@ -105,89 +102,95 @@
   background-color: inherit;
   width: fit-content;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 20.16px;
+  font-size: 1rem;
+  line-height: 1.25rem;
 }
 
 .headingThree {
   color: #ffffff;
   background-color: #262628;
   font-weight: 400;
-  font-size: 24px;
-  line-height: 30.24px;
+  font-size: 1.25rem;
+  line-height: 1.875rem;
 }
 
 .headingFour {
   color: #afafaf;
   background-color: #262628;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 20.16px;
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 1440px) {
+  .container {
+    width: 24rem;
+  }
 }
 
 @media (max-width: 768px) {
   .container {
-    width: 347.48px;
-    height: 324.89px;
-    border-radius: 6.95px;
+    width: 21.718rem;
+    height: 20.306rem;
+    border-radius: 0.434rem;
+  }
+
+  .cardContainer {
+    padding: 1.875rem;
   }
 
   .cardTop {
-    padding: 30.4px 30.4px;
+    /* padding: 30.4px 30.4px; */
     border-radius: 6.95px;
   }
 
   .cardMiddle {
-    padding-left: 30.4px;
-    padding-top: 30px;
-    gap: 13.9px;
+    /* padding-left: 30.4px; */
+    margin-top: 3.25rem;
+    /* padding-top: 30px; */
+    gap: 0.844rem;
   }
 
   .cardBottom {
-    padding-left: 30.4px;
-    padding-top: 39px;
+    /* padding-left: 30.4px;
+    padding-top: 39px; */
+    margin-top: 3.438rem;
     font-weight: 400;
-    font-size: 13.9px;
-    line-height: 17.51px;
+    font-size: 0.844rem;
+    line-height: 1.095rem;
   }
 
   .headingTwo {
     font-weight: 500;
-    font-size: 13.9px;
-    line-height: 17.51px;
+    font-size: 0.844rem;
+    line-height: 1.095rem;
   }
 
   .headingThree {
     font-weight: 400;
-    font-size: 20.85px;
-    line-height: 26.27px;
+    font-size: 1.25rem;
+    line-height: 1.625rem;
   }
 
   .headingFour {
     font-weight: 400;
-    font-size: 13.9px;
-    line-height: 17.51px;
+    font-size: 0.844rem;
+    line-height: 1.095rem;
   }
 
   .imageStyle {
-    height: 40.83px;
-    width: 33.57px;
+    height: 2.5rem;
+    width: 2.098rem;
   }
 }
 
 .imageStyle {
-  /* position: relative;
-  justify-content: left; */
-  /* background-color: inherit; */
   width: fit-content;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 64px;
-  width: 64px;
+  height: 4rem;
+  width: 4rem;
   /* left: 35px; */
 }
 

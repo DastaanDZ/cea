@@ -23,41 +23,43 @@ export const Card: React.FC<Resources | CompetitiveExam> = (card) => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.cardTop}>
-        <div
-          className={styles.imageStyle}
-          style={{
-            backgroundColor: bgColor,
-            borderRadius: "4px",
-          }}
+      <div className={styles.cardContainer}>
+        <div className={styles.cardTop}>
+          <div
+            className={styles.imageStyle}
+            style={{
+              backgroundColor: bgColor,
+              borderRadius: "4px",
+            }}
+          >
+            <Icons type={card.type} name={card.name} />
+          </div>
+          <div className={styles.headingOne}>{card.type}</div>
+        </div>
+
+        <div className={styles.cardMiddle}>
+          <div className={styles.headingTwo}>{card.name}</div>
+          <div className={styles.middleHeading}>
+            <div className={styles.headingThree}>{card.title}</div>
+            <div className={styles.headingFour}>{card.subTitle}</div>
+          </div>
+        </div>
+
+        <Link
+          className={styles.cardBottom}
+          style={{ color: bgColor }}
+          href={`/${
+            card.type === "core" || card.type === "coding"
+              ? "resources"
+              : "compExam"
+          }/${card.id}`}
         >
-          <Icons type={card.type} name={card.name} />
-        </div>
-        <div className={styles.headingOne}>{card.type}</div>
+          Know More{" "}
+          <FaArrowRight
+            style={{ backgroundColor: "inherit", marginLeft: "9px" }}
+          />
+        </Link>
       </div>
-
-      <div className={styles.cardMiddle}>
-        <div className={styles.headingTwo}>{card.name}</div>
-        <div className={styles.middleHeading}>
-          <div className={styles.headingThree}>{card.title}</div>
-          <div className={styles.headingFour}>{card.subTitle}</div>
-        </div>
-      </div>
-
-      <Link
-        className={styles.cardBottom}
-        style={{ color: bgColor }}
-        href={`/${
-          card.type === "core" || card.type === "coding"
-            ? "resources"
-            : "compExam"
-        }/${card.id}`}
-      >
-        Know More{" "}
-        <FaArrowRight
-          style={{ backgroundColor: "inherit", marginLeft: "9px" }}
-        />
-      </Link>
 
       {/* <RightArrowButton text="Know More" redirectLink="#" /> */}
       <div className={styles.glow1}></div>

@@ -2,12 +2,12 @@
   display: flex;
   gap: 1rem;
   color: white;
-  margin-top: 5rem;
+  /* margin-top: 5rem; */
   flex-wrap: wrap;
   max-width: 1312px;
-  padding: 0 8.25rem;
+  /* padding: 0 8.25rem; */
   justify-content: space-between;
-  margin-bottom: 2rem;
+  /* margin-bottom: 2rem; */
   /* background: radial-gradient(
         circle farthest-side at 0% 50%,
         #1a1a1a 23.5%,
@@ -138,7 +138,7 @@
   color: white;
 }
 .contactContainer h3 {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   color: #808080;
   font-size: 2rem;
   margin-left: 2rem;
@@ -334,11 +334,11 @@
 
 @media (max-width: 758px) {
   .infoContainer {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     width: 300px;
   }
   .linksContainer {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
   .bottom {
     display: flex;
@@ -363,6 +363,15 @@
   }
   .arrow {
     font-size: 1.5rem;
+  }
+  .linksContainer{
+    gap: 1rem;
+  }
+  .linksContainer p{
+    margin-bottom: 1.5rem;
+  }
+  .linksContainer ul{
+    gap: 0.5rem;
   }
 }
 

@@ -12,6 +12,7 @@ import { Rating } from "react-simple-star-rating";
 import { toast } from "react-toastify";
 import prismadb from "@/lib/prismadb";
 import { InterviewExp } from "@prisma/client";
+import { SimpleLoader } from "../assests/SimpleLoader";
 
 interface InterviewFormProps {
   recordedEmail: string | undefined;
@@ -91,6 +92,7 @@ export const InterviewForm: React.FC<InterviewFormProps> = ({
   const [checked, setChecked] = useState(false);
 
   const [rating, setRating] = useState(0);
+  const [submitSuccess, setSubmitSuccess] = useState(false);
 
   useEffect(() => {
     if (profileUrl !== "") {
@@ -146,6 +148,7 @@ export const InterviewForm: React.FC<InterviewFormProps> = ({
     // console.log(profileUrl);
     // console.log(logoUrl);
     // console.log(data)
+    setSubmitSuccess(!submitSuccess);
 
     const linkData = [
       {
@@ -167,42 +170,45 @@ export const InterviewForm: React.FC<InterviewFormProps> = ({
 
     console.log(finalData);
 
-    if (
-      data.rollno.endsWith("ce") &&
-      data.email.endsWith("ce@nitc.ac.in") &&
-      recordedEmail?.endsWith("ce@nitc.ac.in") &&
-      data.rollno.length == 9
-    ) {
+    if (recordedEmail?.endsWith("ce@nitc.ac.in") && data.rollno.length == 9) {
       if (profileUrl !== "" && logoUrl !== "") {
         // console.log("FOUNDDDDDDDDDD!!!!!!!!!!!");
 
         try {
           await axios.post("/api/interviews", finalData);
           notifySuccess("Experience");
+          setSubmitSuccess(!submitSuccess);
           // Reset the form after a successful submission
         } catch (error: any) {
           if (error.response.data === "email") {
             console.log(error.response.data);
             notifyError(error.response.data);
+            setSubmitSuccess(!submitSuccess);
           } else if (error.response.data === "rollno") {
             console.log(error.response.data);
             notifyError(error.response.data);
+            setSubmitSuccess(!submitSuccess);
           } else if (error.response.data === "phone") {
             console.log(error.response.data);
             notifyError(error.response.data);
+            setSubmitSuccess(!submitSuccess);
           } else {
             console.log(error);
             notifyError("Something has went wrong");
+            setSubmitSuccess(!submitSuccess);
           }
         }
       } else if (profileUrl === "") {
         console.log("profile or logo url missing");
         notifyWarning("Profile Photo");
+        setSubmitSuccess(!submitSuccess);
       } else if (logoUrl === "") {
         notifyWarning("Logo");
+        setSubmitSuccess(!submitSuccess);
       }
     } else {
       notifyWarning("Not a civil student");
+      setSubmitSuccess(!submitSuccess);
     }
   };
 
@@ -350,6 +356,7 @@ export const InterviewForm: React.FC<InterviewFormProps> = ({
               <div className={styles.buttonDiv}>SUBMIT</div>
               <div className={styles.colorDiv}></div>
             </a> */}
+            {submitSuccess && <SimpleLoader />}
           </form>
           <div className={styles.glow4}></div>
           <div className={styles.glow5}></div>

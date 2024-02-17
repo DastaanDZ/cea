@@ -348,6 +348,9 @@
   .bottom ul li {
     margin-right: 1rem;
   }
+  .contactContainer{
+    width: auto;
+  }
   .contactContainer input {
     height: 30px;
   }

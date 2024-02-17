@@ -1,6 +1,5 @@
 .container {
-  width: 23.75rem;
-  height: 32.25rem;
+  max-width: 23.75rem;
   border-radius: 0.4rem;
   color: white;
   position: relative;
@@ -9,20 +8,21 @@
   position: absolute;
   left: -2rem;
   top: 9.56rem;
-  width: 5.125rem;
-  height: 5.25rem;
+  width: 4rem;
+  height: 5rem;
   background: #000000;
   margin-bottom: 1rem;
   padding: 0.588rem 0.338rem;
   text-align: center;
+  border-radius: 3px;
 }
 .days p {
-  font-size: 1.75rem;
+  font-size: 1.3rem;
   font-weight: 700;
 }
 .imgContainer {
-  height: 23.75rem;
-  width: 23.75rem;
+  max-height: 23.75rem;
+  max-width: 23.75rem;
 }
 .img {
   width: 100%;
@@ -53,6 +53,8 @@
 .reg p {
   font-size: 1.25rem;
   font-weight: 500;
+  width: max-content;
+  margin-bottom: 0;
 }
 
 .button {
@@ -63,8 +65,68 @@
   justify-content: center;
   border-radius: 0.2rem;
   background: #d4d4d4;
-  font-size: 0.75rem !important;
-  font-weight: 500 !important;
+  font-size: 0.75rem;
+  font-weight: 500;
   color: #000000;
   cursor: pointer;
+}
+@media (max-width: 550px) {
+}
+@media (max-width: 480px) {
+  .reg p {
+    font-size: 1.125rem;
+  }
+  .button {
+    width: 7.6rem;
+    height: 1.9rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .button {
+    width: 6.5rem;
+    height: 1.8rem;
+  }
+  .days {
+    width: 3.5rem;
+    height: 4.5rem;
+    top: 8rem;
+  }
+  .days p {
+    font-size: 1.18rem;
+  }
+}
+@media (max-width: 360px) {
+  .button {
+    width: 5rem;
+    height: 1.6rem;
+  }
+  .days {
+    width: 3rem;
+    height: 4rem;
+    left: -1.5rem;
+    top: 7rem;
+  }
+  .days p {
+    font-size: 0.98rem;
+  }
+}
+@media (max-width: 320px) {
+  .button {
+    width: 4rem;
+    height: 1.4rem;
+    font-size: 0.6rem;
+  }
+  .days {
+    width: 2.5rem;
+    height: 3.5rem;
+    left: -1.25rem;
+    top: 6rem;
+  }
+  .days p {
+    font-size: 0.77rem;
+  }
+  .reg p {
+    font-size: 0.8rem;
+  }
 }

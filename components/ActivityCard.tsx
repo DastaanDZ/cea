@@ -17,7 +17,7 @@ export const ActivityCard: React.FC<Activity> = (data) => {
           <p>27th January 2023</p>
           <div className={styles.reg}>
             <p>Fee: ₹ 799</p>
-            <p className={styles.button}>Register</p>
+            <div className={styles.button}>Register</div>
           </div>
         </div>
       </div>

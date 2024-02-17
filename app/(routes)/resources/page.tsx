@@ -17,11 +17,16 @@ export default function ResourcesPage() {
   const [displayResource, setDisplayResource] = useState(resources);
 
   useEffect(() => {
-    if (resources.length == 0) {
+    if (resources.length === 0) {
       addResources();
       console.log("ADDED RESOURCES");
     }
   }, []);
+
+  useEffect(() => {
+    setDisplayResource(resources);
+    console.log("AFTER SETTING DISPAY RESOURCES", displayResource.length);
+  }, [resources]);
 
   return (
     <div className={styles.container}>
@@ -36,15 +41,17 @@ export default function ResourcesPage() {
           <BigButton name="IT/CS Materials" />
         </div>
         <SearchBar
-        // data={resources}
-        // onChange={(displayData: any) => setDisplayResource(displayData)}
+          data={resources}
+          onChange={(displayData: any) => setDisplayResource(displayData)}
         />
       </div>
       <div className={styles.cardContainer}>
-        {resources.length === 0 ? (
+        {displayResource.length === 0 ? (
           <Loader />
         ) : (
-          resources.map((resource) => <Card {...resource} key={resource.id} />)
+          displayResource.map((resource) => (
+            <Card {...resource} key={resource.id} />
+          ))
         )}
       </div>
     </div>

@@ -11,13 +11,19 @@ import { Loader } from "@/components/assests/Loader";
 
 export default function CompExam() {
   const { compExam, addCompetitiveExam } = useCompExamStore();
+  const [displayCompExam, setDisplayCompExam] = useState(compExam);
 
   useEffect(() => {
     if (compExam.length === 0) {
       addCompetitiveExam();
-      console.log("ADDED INTERVIEWS");
+      console.log("ADDED COMPEXAM");
     }
   }, []);
+
+  useEffect(() => {
+    setDisplayCompExam(compExam);
+    console.log("AFTER SETTING DISPAY COMPEXAMS", displayCompExam.length);
+  }, [compExam]);
 
   return (
     <div className={styles.container}>
@@ -26,12 +32,15 @@ export default function CompExam() {
         heading="COMPETITIVE."
         subHeading="EXAMS."
       />
-      <SearchBar />
+      <SearchBar
+        data={compExam}
+        onChange={(displayData: any) => setDisplayCompExam(displayData)}
+      />
       <div className={styles.cardContainer}>
-        {compExam.length === 0 ? (
+        {displayCompExam.length === 0 ? (
           <Loader />
         ) : (
-          compExam.map((exam) => <Card {...exam} key={exam.id} />)
+          displayCompExam.map((exam) => <Card {...exam} key={exam.id} />)
         )}
       </div>
     </div>

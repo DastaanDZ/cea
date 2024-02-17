@@ -17,15 +17,15 @@
     rgba(26, 26, 26, 0)
   );
 }
-.logo{
+.logo {
   height: 28px;
   background: transparent;
 }
-.hidden{
+.hidden {
   width: 100vw;
   height: 3rem;
 }
-.heading{
+.heading {
   width: 100vw;
   height: 3rem;
 }
@@ -167,7 +167,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  top: -2300%;
+  top: -150vh;
   left: 0;
   width: 100%;
   min-height: 100vh;
@@ -253,7 +253,7 @@
   .mobileNav {
     display: flex;
   }
-  .navDiv{
+  .navDiv {
     padding: 0rem 3rem;
   }
 }

@@ -34,15 +34,15 @@ export const Navbar = () => {
             <a href="/compExam">CompExams.</a>
           </div>
           <UserButton afterSignOutUrl="/" />
-          <a href="" className={styles.mainDiv}>
-            {/* <div className={styles.buttonDiv}>
+          {/* <a href="" className={styles.mainDiv}>
+            <div className={styles.buttonDiv}>
               Sign In
               <div className={styles.arrowDiv}>
                 <Image src={arrow} alt="" className={styles.arrowButton} />
               </div>
-            </div> */}
-            {/* <div className={styles.colorDiv}></div> */}
-          </a>
+            </div>
+            <div className={styles.colorDiv}></div>
+          </a> */}
           <div className={styles.menuBack}>
             <button
               className={`${styles.hamburger}  ${

@@ -94,7 +94,7 @@
 
 @media (max-width: 768px) {
   .searchBar {
-    /* justify-content: center; */
+    justify-content: center;
     gap: 1.25rem;
   }
   .inputContainer {
@@ -111,7 +111,7 @@
   }
   .inputWrapper {
     padding: 0.5rem 1.2rem 0.5rem 1.2rem;
-    width: 100%;
+    width: 80%;
     height: 3rem;
   }
 }

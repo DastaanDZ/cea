@@ -3,10 +3,10 @@
   flex: 1;
   flex-wrap: wrap;
   max-width: 82rem;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   margin-top: 3.125rem;
-  gap: 3rem;
+  gap: 4.5rem;
 }
 
 .container {
@@ -21,12 +21,12 @@
 
 .imageContainer {
   max-width: 1242px;
-  width: 100%;
-  max-height: 413.74px;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 1rem;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .image {
@@ -34,45 +34,23 @@
   /* top: 10px; */
   z-index: 1;
   flex-shrink: 1;
-  height: 350px;
+  height: 100%;
+  width: 100%;
+}
+.imageContainer p {
+  position: relative;
+  text-align: center;
+  color: #afafaf;
+  font-weight: 400;
+  font-size: 1.5rem;
 }
 
 @media (max-width: 1440px) {
-  .cardContainer {
-    justify-content: center;
-    gap: 2rem;
-  }
 }
 @media (max-width: 1366px) {
-  .cardContainer {
-    justify-content: center;
-    gap: 3rem;
-  }
-  .imageContainer {
-    width: 1150px;
-    height: 400px;
-  }
-
-  .image {
-    width: 1100px;
-    height: 350px;
-  }
 }
 
 @media (max-width: 1220px) {
-  .cardContainer {
-    justify-content: center;
-    gap: 3rem;
-  }
-  .imageContainer {
-    width: 1000px;
-    height: 380px;
-  }
-
-  .image {
-    width: 970px;
-    height: 350px;
-  }
 }
 
 @media (max-width: 1024px) {
@@ -80,59 +58,26 @@
     padding: 2rem 3rem;
   }
   .cardContainer {
-    justify-content: center;
     gap: 3rem;
-  }
-  .imageContainer {
-    width: 900px;
-    height: 350px;
-  }
-
-  .image {
-    width: 850px;
-    height: 320px;
+    padding: 0 2rem;
   }
 }
 
 @media (max-width: 900px) {
-  .imageContainer {
-    width: 750px;
-    height: 330px;
-  }
-
-  .image {
-    width: 700px;
-    height: 300px;
-  }
 }
 
 @media (max-width: 768px) {
   .container {
     padding: 2rem 2rem;
   }
-  .cardContainer {
-    justify-content: center;
-  }
-  .imageContainer {
-    width: 525px;
-    height: 300px;
-  }
-
-  .image {
-    width: 500px;
-    height: 200px;
+  .imageContainer p {
+    font-size: 1.25rem;
   }
 }
 
 @media (max-width: 550px) {
-  .imageContainer {
-    width: 470px;
-    height: 132px;
-  }
-
-  .image {
-    width: 420px;
-    height: 120px;
+  .imageContainer p {
+    font-size: 0.75rem;
   }
 }
 
@@ -140,13 +85,17 @@
   .container {
     padding: 2rem 1rem;
   }
-  .imageContainer {
-    width: 400px;
-    height: 132px;
+  .imageContainer p {
+    font-size: 0.75rem;
   }
-
-  .image {
-    width: 350px;
-    height: 120px;
+}
+@media (max-width: 360px) {
+  .cardContainer {
+    padding: 0 1.5rem;
+  }
+}
+@media (max-width: 320px) {
+  .cardContainer {
+    padding: 0 1.25rem;
   }
 }

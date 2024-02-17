@@ -1,6 +1,6 @@
 .button {
-  width: 19rem;
-  height: 4.125rem;
+  width: fit-content;
+  height: fit-content;
   background-color: #262628;
   padding: 1.125rem 3rem 1.125rem 3rem;
   color: #afafaf;
@@ -8,14 +8,18 @@
   font-weight: 400;
   border: 0.063rem solid #262628;
   border-radius: 0.25rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (max-width: 768px) {
   .button {
-    width: 10.813rem;
-    height: 2.25rem;
+    /* width: 10.813rem;
+    height: 2.25rem; */
     padding: 0.625rem 1.2rem 0.625rem 1.2rem;
-    font-size: 0.781rem;
+    /* font-size: 1rem; */
     font-weight: 400;
     border: 0.031rem solid #262628;
     border-radius: 0.13rem;
@@ -24,10 +28,10 @@
 
 @media (max-width: 480px) {
   .button {
-    max-width: 8.75rem;
+    /* max-width: 8.75rem; */
     /* height: 2.25rem; */
     padding: 0.625rem 1.2rem 0.625rem 1.2rem;
-    font-size: 0.781rem;
+    font-size: 1rem;
     font-weight: 400;
     border: 0.031rem solid #262628;
     border-radius: 0.13rem;

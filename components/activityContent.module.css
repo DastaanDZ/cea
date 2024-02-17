@@ -1,73 +1,26 @@
-.mainDiv {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 3rem;
-}
-.activeIdMain {
-  display: flex;
-  flex-direction: column;
-  gap: 2.25rem;
-  padding: 3rem;
-  border-radius: 1rem;
-  background-color: #313131;
-  max-width: 81.25rem;
-}
-.activeIdHead {
-  display: flex;
-  gap: 1.5rem;
-  background-color: transparent;
-}
-.activeIdHead h1 {
-  font-weight: 600;
-  font-size: 2.25rem;
-  color: #f8c733;
-  background-color: transparent;
-}
-.activeIdMain ul {
-  display: flex;
-  align-self: center;
-  justify-content: center;
-  gap: 7.5rem;
-  padding: 0 5.5rem;
-  background-color: transparent;
-}
-.activeIdMain ul li {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.75rem;
-  background-color: transparent;
-}
-.activeIdMain ul li h3 {
-  padding: 0.25rem 1.375rem;
-  border-radius: 0.25rem;
-  background-color: #afafaf;
-  font-weight: 400;
-  font-size: 1.125rem;
-  color: black;
-}
-.activeIdMain ul li p {
-  font-weight: 400;
-  font-size: 1.25rem;
-  color: white;
-  background-color: transparent;
-}
 .aboutMain {
   display: flex;
   gap: 1rem;
-  align-items: flex-start;
   justify-content: center;
   max-width: 81.25rem;
+  width: 100%;
+  background: url("/activityBg.png");
   background-color: #313131;
   border-radius: 1rem;
-  margin: 0 1rem;
 }
-
-.aboutMain img {
+.imgContentWrapper {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  max-width: 81.25rem;
+  width: 100%;
+  background: url("/activityBg.png");
+  background-color: #313131;
+  border-radius: 1rem;
+}
+.img {
+  width: 31.25rem;
+  height: 31.25rem;
   border-top-left-radius: 1rem;
   border-bottom-left-radius: 1rem;
   background-color: transparent;
@@ -77,44 +30,20 @@
   flex-direction: column;
   gap: 1.5rem;
   background-color: transparent;
-  padding: 0 4rem;
+  padding: 2rem 4rem;
 }
-@media (max-width: 1336px) {
-  .aboutMain {
-    flex-direction: column;
-  }
-  .aboutDiv {
-    padding: 0 3rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .aboutDiv {
-    padding: 0 2rem;
-  }
-}
-
-@media (max-width: 550) {
-  .aboutDiv {
-    padding: 0 1rem;
-  }
-  .aboutMain {
-    margin: 0;
-  }
-  .image {
-    width: 100%;
-    height: 100%;
-  }
-  .img {
-    width: 100%;
-    height: 100%;
-  }
-}
-.aboutDiv h1 {
+.aboutDiv h1,
+.mobileAbout {
   font-weight: 600;
   font-size: 1.75rem;
   color: #f8c733;
   background-color: transparent;
+}
+.mobileAbout {
+  display: none;
+  /* margin-top: 2rem; */
+  text-align: left;
+  align-items: flex-start;
 }
 .aboutDiv p {
   font-weight: 400;
@@ -123,15 +52,120 @@
   opacity: 50%;
   color: white;
   text-align: justify;
+  max-height: calc(12 * 1em * 1.4);
+  line-height: 1.4;
+  overflow: hidden;
+  position: relative;
+}
+.expand_btn {
+  appearance: none;
+  cursor: pointer;
+  border-bottom: none;
+  width: max-content;
+  padding: 0;
+  border-radius: none;
+  margin-bottom: none;
+  height: max-content;
+  margin-left: auto;
+}
+.expand_btn::before {
+  content: "Read More";
+  font-size: 0.8rem;
+}
+.expand_btn:checked::before {
+  content: "Read Less";
+}
+.aboutDiv p:has(+ .expand_btn:checked) {
+  max-height: none;
 }
 .buttonDiv {
   display: flex;
   justify-content: flex-end;
   background-color: transparent;
-  padding: 1rem;
 }
 .aboutDiv button {
   padding: 0.55rem 2.3rem;
   background-color: white;
   color: black;
+  border-radius: 0.4rem;
+}
+@media (max-width: 1440px) {
+}
+@media (max-width: 1366px) {
+}
+@media (max-width: 1220px) {
+  .img {
+    height: 25rem;
+  }
+  .aboutDiv p {
+    max-height: calc(7 * 1em * 1.4);
+  }
+}
+@media (max-width: 1024px) {
+  .aboutMain {
+    flex-direction: column;
+    padding: 2rem 2rem;
+  }
+  .imgContentWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: inherit;
+  }
+  .img {
+    height: 100%;
+    width: 100%;
+    max-width: 31.25rem;
+  }
+  .aboutDiv h1 {
+    display: none;
+  }
+  .mobileAbout {
+    display: block;
+  }
+  .img {
+    border-top-left-radius: 0rem;
+    border-bottom-left-radius: 0rem;
+  }
+  .buttonDiv {
+    justify-content: center;
+  }
+}
+@media (max-width: 900px) {
+  .aboutDiv {
+    padding: 2rem 3rem;
+  }
+}
+@media (max-width: 768px) {
+  .aboutDiv {
+    padding: 2rem 2rem;
+  }
+}
+@media (max-width: 550px) {
+  .aboutMain {
+    padding: 2rem 0rem;
+  }
+  .mobileAbout {
+    padding: 0rem 2rem;
+  }
+  .aboutDiv {
+    padding: 2rem 1.3rem;
+  }
+}
+@media (max-width: 480px) {
+  .expand_btn::before {
+    font-size: 0.6rem;
+  }
+}
+@media (max-width: 400px) {
+}
+@media (max-width: 360px) {
+  .aboutDiv p {
+    font-size: 0.8rem;
+  }
+  .aboutDiv button {
+    padding: 0.4rem 1.8rem;
+  }
+}
+@media (max-width: 320px) {
 }

@@ -72,3 +72,24 @@ p,h1,h2,h3,label,form,span{
 .cl-userButton-root{
   background: transparent;
 }
+
+.seperator {
+  margin: 2rem 4rem;
+  position: relative;
+  display: flex;
+}
+.seperator::after {
+  z-index: 1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px; /* Adjust the border height as needed */
+  background: linear-gradient(
+    90deg,
+    rgba(107, 107, 107, 0.3) 0%,
+    #6b6b6b 50.56%,
+    rgba(107, 107, 107, 0.3) 101.81%
+  );
+}

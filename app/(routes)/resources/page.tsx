@@ -45,7 +45,10 @@ export default function ResourcesPage() {
           onChange={(displayData: any) => setDisplayResource(displayData)}
         />
       </div>
-      <div className={styles.cardContainer}>
+      <div
+        className={styles.cardContainer}
+        style={{ width: displayResource.length === 0 ? "auto" : "100%" }}
+      >
         {displayResource.length === 0 ? (
           <Loader />
         ) : (

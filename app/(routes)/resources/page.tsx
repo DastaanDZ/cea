@@ -37,8 +37,17 @@ export default function ResourcesPage() {
       />
       <div className={styles.selection}>
         <div className={styles.bigButtons}>
-          <BigButton name="Core Materials" />
-          <BigButton name="IT/CS Materials" />
+          <BigButton
+            name="Core Materials"
+            data={resources}
+            onChange={(displayData: any) => setDisplayResource(displayData)}
+          />
+
+          <BigButton
+            name="IT/CS Materials"
+            data={resources}
+            onChange={(displayData: any) => setDisplayResource(displayData)}
+          />
         </div>
         <SearchBar
           data={resources}

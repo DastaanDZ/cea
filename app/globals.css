@@ -97,3 +97,17 @@ p,h1,h2,h3,label,form,span{
 .cl-internal-1acnfz5{
   background: transparent;
 }
+
+
+/* ------------ custom scrollbar ---------- */
+
+::-webkit-scrollbar{
+  width: 4px;
+}
+
+::-webkit-scrollbar-track{
+  background: #1a1a1a;
+}
+::-webkit-scrollbar-thumb{
+  background: #808080;
+}

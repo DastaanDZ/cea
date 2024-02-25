@@ -1,17 +1,25 @@
+"use client";
+
 import React from "react";
 import styles from "./resourceCard.module.css";
 import Image from "next/image";
 import school from "../public/school.svg";
 import { RightArrowButton } from "./RightArrowButton";
+import { useInView } from "react-intersection-observer";
 
 interface ResourceCardProps {
   title: string;
 }
 
 export const ResourceCard: React.FC<ResourceCardProps> = ({ title }) => {
+  const { ref, inView, entry } = useInView();
+
   return (
     <>
-      <div className={styles.borderDiv}>
+      <div
+        ref={ref}
+        className={`${styles.borderDiv} ${inView ? styles.borderDivShow : ""}`}
+      >
         <div className={styles.cards}>
           <div className={styles.cardHeading}>
             <Image

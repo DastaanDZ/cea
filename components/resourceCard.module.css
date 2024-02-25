@@ -3,6 +3,13 @@
   border-radius: 1rem;
   padding: 1px;
   width: 39.25rem;
+  transform: translateY(2rem);
+  transition: all 1s;
+  opacity: 0;
+}
+.borderDivShow{
+  transform: translateY(0px);
+  opacity: 1;
 }
 .borderDiv:hover {
   box-shadow: 0px 0px 50px 1px #804ced, 0px 0px 50px 1px #f48fd0;

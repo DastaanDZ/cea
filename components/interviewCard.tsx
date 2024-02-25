@@ -9,7 +9,11 @@ import { InterviewExp } from "@prisma/client";
 import { IoStar } from "react-icons/io5";
 import { useInterviewStore } from "@/app/store/interviews";
 
+import { useInView } from "react-intersection-observer";
+
 export const InterviewCard: React.FC<any> = (data) => {
+  const { ref, inView, entry } = useInView();
+
   const [para, setPara] = useState("");
 
   useEffect(() => {
@@ -28,7 +32,10 @@ export const InterviewCard: React.FC<any> = (data) => {
 
   return (
     <>
-      <div className={styles.cardDiv}>
+      <div
+        ref={ref}
+        className={`${styles.cardDiv} ${inView ? styles.cardDivShow : ""}`}
+      >
         <div className={styles.profilePic}>
           <img src={data.link[0].link} alt="" />
         </div>

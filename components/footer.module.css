@@ -60,6 +60,9 @@
   flex-wrap: wrap;
   justify-content: center;
 }
+.inputBtnContainer ::placeholder{
+  background: #1a1a1a;
+}
 .infoContainer {
   width: 383px;
   background: transparent;

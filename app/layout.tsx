@@ -58,7 +58,6 @@ export default function RootLayout({
             />
             <Navbar />
             {children}
-            <div className="seperator"></div>
             <Footer />
           </body>
         </html>

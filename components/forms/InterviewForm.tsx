@@ -6,7 +6,7 @@ import * as z from "zod";
 import axios from "axios";
 import { CldUploadWidget } from "next-cloudinary";
 import { ImageUpload } from "../ImageUpload";
-import { useEffect, useState } from "react";
+import { ChangeEvent, useEffect, useState } from "react";
 import styles from "./InterviewForm.module.css";
 import { Rating } from "react-simple-star-rating";
 import { toast } from "react-toastify";
@@ -110,8 +110,8 @@ export const InterviewForm: React.FC<InterviewFormProps> = ({
     setRating(rate);
   };
 
-  const handleChecked = () => {
-    setChecked(!checked);
+  const handleChecked = (event: ChangeEvent<HTMLInputElement>) => {
+    setChecked(event.target.checked);
     console.log(checked);
   };
 
@@ -171,7 +171,9 @@ export const InterviewForm: React.FC<InterviewFormProps> = ({
     console.log(finalData);
 
     if (recordedEmail?.endsWith("ce@nitc.ac.in") && data.rollno.length == 9) {
-      if (profileUrl !== "" && logoUrl !== "") {
+      if (!checked) {
+        notifyWarning("Checked the acknowledgment box");
+      } else if (profileUrl !== "" && logoUrl !== "") {
         // console.log("FOUNDDDDDDDDDD!!!!!!!!!!!");
 
         try {
@@ -352,10 +354,6 @@ export const InterviewForm: React.FC<InterviewFormProps> = ({
               all information provided by me is accurate.
             </label>
             <input type="submit" className={styles.button} />
-            {/* <a type="submit" href="" className={styles.mainDiv}>
-              <div className={styles.buttonDiv}>SUBMIT</div>
-              <div className={styles.colorDiv}></div>
-            </a> */}
             {submitSuccess && <SimpleLoader />}
           </form>
           <div className={styles.glow4}></div>

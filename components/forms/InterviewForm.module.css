@@ -328,15 +328,14 @@
     font-size: 2rem;
     margin-bottom: 2rem;
   }
-  .container {
-    padding: 1rem;
-  }
-
   .rollAndContactContainer {
     gap: 1rem;
   }
 
   .inputWrapper {
     padding: 0.5rem 1rem 0.5rem 1rem;
+  }
+  .temp{
+    padding: 0 1rem;
   }
 }

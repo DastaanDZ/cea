@@ -3,8 +3,8 @@
   border-radius: 1rem;
   padding: 1px;
   width: 39.25rem;
+  transition: transform 1s;
   transform: translateY(2rem);
-  transition: all 1s;
   opacity: 0;
 }
 .borderDivShow{

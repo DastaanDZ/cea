@@ -6,7 +6,7 @@ import * as z from "zod";
 import axios from "axios";
 import { CldUploadWidget } from "next-cloudinary";
 import { ImageUpload } from "../ImageUpload";
-import { useEffect, useState } from "react";
+import { ChangeEvent, useEffect, useState } from "react";
 import styles from "./InterviewForm.module.css";
 import { Rating } from "react-simple-star-rating";
 import { toast } from "react-toastify";
@@ -26,7 +26,7 @@ const formSchema = z.object({
   phone: z.string().min(1),
   company: z.string().min(1),
   packages: z.string().min(1),
-  desc: z.string().min(1),
+  desc: z.string().min(235),
 });
 
 type InterviewFormValues = z.infer<typeof formSchema>;
@@ -110,8 +110,8 @@ export const InterviewForm: React.FC<InterviewFormProps> = ({
     setRating(rate);
   };
 
-  const handleChecked = () => {
-    setChecked(!checked);
+  const handleChecked = (event: ChangeEvent<HTMLInputElement>) => {
+    setChecked(event.target.checked);
     console.log(checked);
   };
 
@@ -171,14 +171,15 @@ export const InterviewForm: React.FC<InterviewFormProps> = ({
     console.log(finalData);
 
     if (recordedEmail?.endsWith("ce@nitc.ac.in") && data.rollno.length == 9) {
-      if (profileUrl !== "" && logoUrl !== "") {
+      if (!checked) {
+        notifyWarning("Checked the acknowledgment box");
+      } else if (profileUrl !== "" && logoUrl !== "") {
         // console.log("FOUNDDDDDDDDDD!!!!!!!!!!!");
 
         try {
+          notifyWarning("Please Wait, Your Experience is getting submitted");
           await axios.post("/api/interviews", finalData);
           notifySuccess("Experience");
-          setSubmitSuccess(!submitSuccess);
-          // Reset the form after a successful submission
         } catch (error: any) {
           if (error.response.data === "email") {
             console.log(error.response.data);
@@ -352,11 +353,7 @@ export const InterviewForm: React.FC<InterviewFormProps> = ({
               all information provided by me is accurate.
             </label>
             <input type="submit" className={styles.button} />
-            {/* <a type="submit" href="" className={styles.mainDiv}>
-              <div className={styles.buttonDiv}>SUBMIT</div>
-              <div className={styles.colorDiv}></div>
-            </a> */}
-            {submitSuccess && <SimpleLoader />}
+            {/* {submitSuccess && <SimpleLoader />} */}
           </form>
           <div className={styles.glow4}></div>
           <div className={styles.glow5}></div>

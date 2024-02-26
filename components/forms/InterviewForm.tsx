@@ -177,10 +177,9 @@ export const InterviewForm: React.FC<InterviewFormProps> = ({
         // console.log("FOUNDDDDDDDDDD!!!!!!!!!!!");
 
         try {
+          notifyWarning("Please Wait, Your Experience is getting submitted");
           await axios.post("/api/interviews", finalData);
           notifySuccess("Experience");
-          setSubmitSuccess(!submitSuccess);
-          // Reset the form after a successful submission
         } catch (error: any) {
           if (error.response.data === "email") {
             console.log(error.response.data);
@@ -354,7 +353,7 @@ export const InterviewForm: React.FC<InterviewFormProps> = ({
               all information provided by me is accurate.
             </label>
             <input type="submit" className={styles.button} />
-            {submitSuccess && <SimpleLoader />}
+            {/* {submitSuccess && <SimpleLoader />} */}
           </form>
           <div className={styles.glow4}></div>
           <div className={styles.glow5}></div>

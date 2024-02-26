@@ -9,6 +9,8 @@ import "react-toastify/dist/ReactToastify.css";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 
+import styles from "./page.module.css";
+
 const sora = Sora({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -58,6 +60,7 @@ export default function RootLayout({
             />
             <Navbar />
             {children}
+            <div className={styles.seperator}></div>
             <Footer />
           </body>
         </html>

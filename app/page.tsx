@@ -39,8 +39,6 @@ export default async function Home() {
     // console.log("After currentUser(), user:", user);
     return (
       <>
-        {/* <div>Hello {user?.emailAddresses[0].emailAddress}!</div> */}
-        {/* <UserButton afterSignOutUrl="/" /> */}
         <HomePage />
         <div className={styles.seperator}></div>
         <OurExperience />
@@ -50,7 +48,6 @@ export default async function Home() {
         <Resource />
         <div className={styles.seperator}></div>
         <InterviewExperience />
-        <div className={styles.seperator}></div>
       </>
     );
   } catch (error) {

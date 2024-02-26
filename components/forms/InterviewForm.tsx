@@ -26,7 +26,7 @@ const formSchema = z.object({
   phone: z.string().min(1),
   company: z.string().min(1),
   packages: z.string().min(1),
-  desc: z.string().min(1),
+  desc: z.string().min(235),
 });
 
 type InterviewFormValues = z.infer<typeof formSchema>;

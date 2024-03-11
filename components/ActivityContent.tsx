@@ -29,6 +29,8 @@ export const ActivityContent = () => {
             </p>
             <input className={styles.expand_btn} type="checkbox" />
             <div className={styles.buttonDiv}>
+              {/* <Link> 
+              </Link> */}
               <button className={styles.button}>Register Now</button>
             </div>
           </div>

@@ -22,7 +22,7 @@ export async function POST(req: Request) {
     const { userId } = auth();
     const body = await req.json();
 
-    const { name, desc, type, linkData } = body;
+    const { name, desc, type, linkData, activityDate, deadline, venue } = body;
 
     if (!userId) {
       return new NextResponse("Unauthenticated", { status: 401 });
@@ -39,12 +39,24 @@ export async function POST(req: Request) {
     if (!linkData) {
       return new NextResponse("link Data is required", { status: 400 });
     }
+    if (!activityDate) {
+      return new NextResponse("activityDate Data is required", { status: 400 });
+    }
+    if (!deadline) {
+      return new NextResponse("deadline Data is required", { status: 400 });
+    }
+    if (!venue) {
+      return new NextResponse("venue Data is required", { status: 400 });
+    }
 
     const event = await prismadb.activity.create({
       data: {
         name: name,
         desc: desc,
         type: type,
+        activityDate: activityDate,
+        deadline : deadline,
+        venue : venue,
         link: {
           create: linkData.map((link: any) => ({
             name: link.name,

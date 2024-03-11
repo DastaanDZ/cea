@@ -18,12 +18,16 @@ const formSchema = z.object({
   name: z.string().min(1),
   desc: z.string().min(1),
   type: z.string().min(1),
+  activityDate: z.coerce.date(),
+  deadline: z.coerce.date(),
+  venue: z.string().min(1),
 });
 
 type ActivityFormValues = z.infer<typeof formSchema>;
 
 export const ActivityForm: React.FC = () => {
-  const [url, setUrl] = useState("");
+  const [photoUrl, setPhotoUrl] = useState("");
+  const [guideline, setGuideline] = useState("");
 
   const {
     register,
@@ -37,8 +41,12 @@ export const ActivityForm: React.FC = () => {
   const onSubmit: SubmitHandler<ActivityFormValues> = async (data) => {
     const linkData = [
       {
-        name: "url",
-        link: url,
+        name: "photoUrl",
+        link: photoUrl,
+      },
+      {
+        name: "guideline",
+        link: guideline,
       },
     ];
 
@@ -49,7 +57,7 @@ export const ActivityForm: React.FC = () => {
 
     console.log(finalData);
 
-    if (url !== "") {
+    if (photoUrl !== "" && guideline !== "") {
       try {
         await axios.post("/api/activity", finalData);
         // reset();
@@ -69,6 +77,16 @@ export const ActivityForm: React.FC = () => {
         <input {...register("desc")} type="text" />
         {errors.desc && <p>{`${errors.desc?.message}`}</p>}
 
+        <label>Activity Date</label>
+        <input {...register("activityDate")} type="date" />
+        {errors.activityDate && <p>{`${errors.activityDate?.message}`}</p>}
+        <label>Deadline</label>
+        <input {...register("deadline")} type="date" />
+        {errors.deadline && <p>{`${errors.deadline?.message}`}</p>}
+        <label>Venue</label>
+        <input {...register("venue")} type="text" />
+        {errors.venue && <p>{`${errors.venue?.message}`}</p>}
+
         <label>Type of Activity</label>
         <select {...register("type")}>
           <option value="">Select...</option>
@@ -80,9 +98,15 @@ export const ActivityForm: React.FC = () => {
         {errors.type && <p>{`${errors.type?.message}`}</p>}
 
         <ImageUpload
-          onChange={(url) => setUrl(url)}
-          onRemove={() => setUrl("")}
+          onChange={(photoUrl) => setPhotoUrl(photoUrl)}
+          onRemove={() => setPhotoUrl("")}
           text="Upload Your Photo"
+        />
+
+        <ImageUpload
+          onChange={(guideline) => setGuideline(guideline)}
+          onRemove={() => setGuideline("")}
+          text="Upload Guidelines"
         />
 
         <input type="submit" />

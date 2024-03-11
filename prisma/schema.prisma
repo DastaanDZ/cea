@@ -90,13 +90,16 @@ model ResourceLink {
 }
 
 model Activity {
-  id        String         @id @default(uuid())
-  name      String         @unique
-  type      String
-  link      ActivityLink[] @relation("ActivityToLink")
-  desc      String
-  createdAt DateTime       @default(now())
-  updatedAt DateTime       @updatedAt
+  id           String         @id @default(uuid())
+  name         String         @unique
+  type         String
+  link         ActivityLink[] @relation("ActivityToLink")
+  desc         String
+  activityDate DateTime
+  deadline     DateTime
+  venue        String
+  createdAt    DateTime       @default(now())
+  updatedAt    DateTime       @updatedAt
 }
 
 model ActivityLink {

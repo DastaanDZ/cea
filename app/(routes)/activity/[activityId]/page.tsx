@@ -19,12 +19,16 @@ export default async function ActivityParticularPage({
     },
   });
 
-  return (
-    <>
-      <div className={styles.mainDiv}>
-        <ActivityHeader activity={activity} />
-        <ActivityContent activity={activity} />
-      </div>
-    </>
-  );
+  if (activity) {
+    return (
+      <>
+        <div className={styles.mainDiv}>
+          <ActivityHeader activity={activity} link={activity?.link} />
+          <ActivityContent activity={activity} link={activity?.link} />
+        </div>
+      </>
+    );
+  } else {
+    return <div>NOT FOUND</div>;
+  }
 }

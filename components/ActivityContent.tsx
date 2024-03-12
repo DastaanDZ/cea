@@ -1,19 +1,21 @@
-import { Activity } from "@prisma/client";
+import { Activity, ActivityLink } from "@prisma/client";
 import styles from "./activityContent.module.css";
 
 interface ActivityContentProps {
   activity: Activity | null;
+  link: ActivityLink[] | null;
 }
 
 export const ActivityContent: React.FC<ActivityContentProps> = ({
   activity,
+  link,
 }) => {
   return (
     <>
       <div className={styles.aboutMain}>
         <h1 className={styles.mobileAbout}>ABOUT</h1>
         <div className={styles.imgContentWrapper}>
-          <img src={activity?.link[0].link} className={styles.img} alt="" />
+          {link && <img src={link[0].link} className={styles.img} alt="" />}
           <div className={styles.aboutDiv}>
             <h1>ABOUT</h1>
             <p>{activity?.desc}</p>

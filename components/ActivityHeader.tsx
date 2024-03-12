@@ -1,12 +1,18 @@
-import { Activity } from "@prisma/client";
+import { Activity, ActivityLink } from "@prisma/client";
 import styles from "./activityHeader.module.css";
 import { FaBookmark } from "react-icons/fa";
+import downloadPdf from "@/utils/downloadPdf";
+import DownloadPdfLink from "./DownloadPdfLink";
 
 interface ActivityHeaderProps {
   activity: Activity | null;
+  link: ActivityLink[] | null;
 }
 
-export const ActivityHeader: React.FC<ActivityHeaderProps> = ({ activity }) => {
+export const ActivityHeader: React.FC<ActivityHeaderProps> = ({
+  activity,
+  link,
+}) => {
   let simpleDate = "";
   let simpleDeadline = "";
 
@@ -33,6 +39,10 @@ export const ActivityHeader: React.FC<ActivityHeaderProps> = ({ activity }) => {
     }
   }
 
+  const handleDownloadPdf = (link: string) => {
+    downloadPdf(link);
+  };
+
   return (
     <>
       <div className={styles.activeIdMain}>
@@ -57,9 +67,7 @@ export const ActivityHeader: React.FC<ActivityHeaderProps> = ({ activity }) => {
           </li>
           <li>
             <h3>Event Guidelines</h3>
-            <a href={activity?.link[1].link} download>
-              Download PDF
-            </a>
+            {link && <DownloadPdfLink link={link[0].link} />}
           </li>
         </ul>
       </div>

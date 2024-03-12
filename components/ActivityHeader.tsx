@@ -1,7 +1,38 @@
+import { Activity } from "@prisma/client";
 import styles from "./activityHeader.module.css";
 import { FaBookmark } from "react-icons/fa";
 
-export const ActivityHeader = () => {
+interface ActivityHeaderProps {
+  activity: Activity | null;
+}
+
+export const ActivityHeader: React.FC<ActivityHeaderProps> = ({ activity }) => {
+  let simpleDate = "";
+  let simpleDeadline = "";
+
+  if (activity) {
+    const activityDateObject = activity.activityDate;
+    const deadlineObject = activity.deadline;
+
+    if (activityDateObject) {
+      const year = activityDateObject.getFullYear();
+      const month = activityDateObject.getMonth() + 1; // Month is zero-indexed, so adding 1
+      const activityDate = activityDateObject.getDate();
+      simpleDate = `${year}-${month < 10 ? "0" + month : month}-${
+        activityDate < 10 ? "0" + activityDate : activityDate
+      }`;
+    }
+
+    if (deadlineObject) {
+      const year = deadlineObject.getFullYear();
+      const month = deadlineObject.getMonth() + 1; // Month is zero-indexed, so adding 1
+      const deadlineDate = deadlineObject.getDate();
+      simpleDeadline = `${year}-${month < 10 ? "0" + month : month}-${
+        deadlineDate < 10 ? "0" + deadlineDate : deadlineDate
+      }`;
+    }
+  }
+
   return (
     <>
       <div className={styles.activeIdMain}>
@@ -9,24 +40,26 @@ export const ActivityHeader = () => {
           <div className={styles.bookmarkContainer}>
             <FaBookmark className={styles.bookmark} />
           </div>
-          <h1>Prithvi ‘24</h1>
+          <h1>{activity?.name}</h1>
         </div>
         <ul>
           <li>
             <h3>Event Date</h3>
-            <p>06-02-2024</p>
+            <p>{simpleDate}</p>
           </li>
           <li>
             <h3>Reg. Deadline</h3>
-            <p>06-02-2024</p>
+            <p>{simpleDeadline}</p>
           </li>
           <li>
             <h3>Venue</h3>
-            <p>Aryabhatta Hall</p>
+            <p>{activity?.venue}</p>
           </li>
           <li>
             <h3>Event Guidelines</h3>
-            <p>Download PDF</p>
+            <a href={activity?.link[1].link} download>
+              Download PDF
+            </a>
           </li>
         </ul>
       </div>

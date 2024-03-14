@@ -65,7 +65,7 @@ export const ActivityHeader: React.FC<ActivityHeaderProps> = ({
             <h3>Venue</h3>
             <p>{activity?.venue}</p>
           </li>
-          <li>
+          <li style={{ cursor: "pointer" }}>
             <h3>Event Guidelines</h3>
             {link && activity?.name && (
               <DownloadPdfLink

@@ -51,7 +51,7 @@ export default async function ResourceMaterial({
             <SiBookstack className={styles.buttonIcons} />
           </div>
           <div className={styles.syllabusTitle}>
-            {resource?.name && resource?.link && (
+            {resource?.title && resource?.link && (
               <DownloadPdfLink
                 title="Syllabus"
                 name={resource?.title + " Syllabus"}
@@ -65,7 +65,7 @@ export default async function ResourceMaterial({
             <MdOutlineLibraryBooks className={styles.buttonIcons} />
           </div>
           <div className={styles.materialTitle}>
-            {resource?.name && resource?.link && (
+            {resource?.title && resource?.link && (
               <DownloadPdfLink
                 title="Support Materials"
                 name={resource?.title + " Support Materials"}

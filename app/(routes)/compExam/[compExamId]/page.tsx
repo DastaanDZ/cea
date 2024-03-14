@@ -8,6 +8,7 @@ import { SiBookstack } from "react-icons/si";
 import prismadb from "@/lib/prismadb";
 import CompExam from "./../page";
 import { styled } from "styled-components";
+import DownloadPdfLink from "@/components/DownloadPdfLink";
 
 export default async function CompExamMaterial({
   params,
@@ -54,7 +55,15 @@ export default async function CompExamMaterial({
               <div style={{ backgroundColor: "inherit" }}>
                 <SiBookstack className={styles.buttonIcons} />
               </div>
-              <div className={styles.syllabusTitle}>Syllabus</div>
+              <div className={styles.syllabusTitle}>
+                {compExam?.title && compExam?.link && (
+                  <DownloadPdfLink
+                    title="Syllabus"
+                    name={compExam?.title + " Syllabus"}
+                    link={compExam?.link[0].link}
+                  />
+                )}
+              </div>
             </button>
             <button className={styles.materials}>
               <div style={{ backgroundColor: "inherit" }}>
@@ -66,7 +75,15 @@ export default async function CompExamMaterial({
               <div style={{ backgroundColor: "inherit" }}>
                 <MdOutlineLibraryBooks className={styles.buttonIcons} />
               </div>
-              <div className={styles.materialTitle}>Support Materials</div>
+              <div className={styles.materialTitle}>
+                {compExam?.title && compExam.link && (
+                  <DownloadPdfLink
+                    title="Support Materials"
+                    name={compExam?.title + " Support Materials"}
+                    link={compExam?.link[1].link}
+                  />
+                )}
+              </div>
             </button>
           </div>
         </div>

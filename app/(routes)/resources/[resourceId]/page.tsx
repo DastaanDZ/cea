@@ -4,6 +4,7 @@ import styles from "./resourceMaterial.module.css";
 import { MdOutlineLibraryBooks } from "react-icons/md";
 import { SiBookstack } from "react-icons/si";
 import prismadb from "@/lib/prismadb";
+import DownloadPdfLink from "@/components/DownloadPdfLink";
 
 export default async function ResourceMaterial({
   params,
@@ -19,6 +20,7 @@ export default async function ResourceMaterial({
     },
   });
 
+  console.log(resource);
   return (
     <div className={styles.container}>
       <PageTopHeading
@@ -26,7 +28,6 @@ export default async function ResourceMaterial({
         heading="RESOURCES."
         subHeading="MATERIALS."
       />
-
       <div className={styles.division}>
         <div className={styles.heading}>
           Resources Materials.\{resource?.title}
@@ -44,19 +45,34 @@ export default async function ResourceMaterial({
           <div style={{ background: "transparent" }}>{resource?.desc}</div>
         </div>
       </div>
-
       <div className={styles.button}>
         <button className={styles.syllabus}>
           <div style={{ background: "transparent" }}>
             <SiBookstack className={styles.buttonIcons} />
           </div>
-          <div className={styles.syllabusTitle}>Syllabus</div>
+          <div className={styles.syllabusTitle}>
+            {resource?.name && resource?.link && (
+              <DownloadPdfLink
+                title="Syllabus"
+                name={resource?.title + " Syllabus"}
+                link={resource?.link[1].link}
+              />
+            )}
+          </div>
         </button>
         <button className={styles.materials}>
           <div style={{ background: "transparent" }}>
             <MdOutlineLibraryBooks className={styles.buttonIcons} />
           </div>
-          <div className={styles.materialTitle}>Support Materials</div>
+          <div className={styles.materialTitle}>
+            {resource?.name && resource?.link && (
+              <DownloadPdfLink
+                title="Support Materials"
+                name={resource?.title + " Support Materials"}
+                link={resource?.link[0].link}
+              />
+            )}
+          </div>
         </button>
       </div>
     </div>

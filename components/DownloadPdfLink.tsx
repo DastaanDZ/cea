@@ -5,9 +5,14 @@ import downloadPdf from "@/utils/downloadPdf";
 interface DownloadPdfLinkProps {
   link: string;
   name: string | null;
+  title: string;
 }
 
-const DownloadPdfLink: React.FC<DownloadPdfLinkProps> = ({ link, name }) => {
+const DownloadPdfLink: React.FC<DownloadPdfLinkProps> = ({
+  link,
+  name,
+  title,
+}) => {
   const handleDownloadPdf = () => {
     const obj = {
       name: name,
@@ -16,7 +21,7 @@ const DownloadPdfLink: React.FC<DownloadPdfLinkProps> = ({ link, name }) => {
     downloadPdf(obj);
   };
 
-  return <p onClick={handleDownloadPdf}>Download PDF</p>;
+  return <p onClick={handleDownloadPdf}>{title}</p>;
 };
 
 export default DownloadPdfLink;

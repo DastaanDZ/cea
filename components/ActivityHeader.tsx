@@ -68,7 +68,11 @@ export const ActivityHeader: React.FC<ActivityHeaderProps> = ({
           <li>
             <h3>Event Guidelines</h3>
             {link && activity?.name && (
-              <DownloadPdfLink name={activity?.name} link={link[1].link} />
+              <DownloadPdfLink
+                title="Download PDF"
+                name={activity?.name}
+                link={link[1].link}
+              />
             )}
           </li>
         </ul>

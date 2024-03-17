@@ -8,6 +8,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
+import NextTopLoader from "nextjs-toploader";
 
 import styles from "./page.module.css";
 
@@ -46,6 +47,7 @@ export default function RootLayout({
               overflowX: "hidden",
             }}
           >
+            <NextTopLoader />
             <ToastContainer
               position="top-right"
               autoClose={5000}

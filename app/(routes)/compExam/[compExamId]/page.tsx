@@ -9,6 +9,8 @@ import prismadb from "@/lib/prismadb";
 import CompExam from "./../page";
 import { styled } from "styled-components";
 import DownloadPdfLink from "@/components/DownloadPdfLink";
+import { redirect } from "next/navigation";
+import { OfficialWebsite } from "@/components/OfficialWebsite";
 
 export default async function CompExamMaterial({
   params,
@@ -69,7 +71,9 @@ export default async function CompExamMaterial({
               <div style={{ backgroundColor: "inherit" }}>
                 <FaGlobeAmericas className={styles.buttonIcons} />
               </div>
-              <div className={styles.materialTitle}>Official Website</div>
+              {compExam && compExam.link && (
+                <OfficialWebsite link={compExam?.link[2].link} />
+              )}
             </button>
             <button className={styles.materials}>
               <div style={{ backgroundColor: "inherit" }}>

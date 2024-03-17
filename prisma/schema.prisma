@@ -120,7 +120,6 @@ model CompetitiveExam {
   subTitle String
   desc     String
   date     DateTime
-  webLink  String
   link     CompetitiveExamLink[] @relation("CompetitiveExamToLink")
 }
 

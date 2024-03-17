@@ -21,6 +21,7 @@ type CompExamFormValues = z.infer<typeof formSchema>;
 export const CompExamForm: React.FC = () => {
   const [syllabusUrl, setSyllabusUrl] = useState("");
   const [notesUrl, setNotesUrl] = useState("");
+  const [webLink, setWebLink] = useState("");
 
   const {
     register,
@@ -40,6 +41,10 @@ export const CompExamForm: React.FC = () => {
       {
         name: "notesUrl",
         link: notesUrl,
+      },
+      {
+        name: "webLink",
+        link: data.webLink,
       },
     ];
 
@@ -81,7 +86,7 @@ export const CompExamForm: React.FC = () => {
         <label>Description</label>
         <input {...register("desc")} type="text" />
         {errors.desc && <p>{`${errors.desc?.message}`}</p>}
-        <label>Website Link</label>
+
         <input {...register("webLink")} type="text" />
         {errors.webLink && <p>{`${errors.webLink?.message}`}</p>}
 

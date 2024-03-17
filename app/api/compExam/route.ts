@@ -22,7 +22,7 @@ export async function POST(req: Request) {
     const { userId } = auth();
     const body = await req.json();
 
-    const { name, type, title, subTitle, desc, webLink, linkData } = body;
+    const { name, type, title, subTitle, desc, linkData, webLink } = body;
 
     if (!userId) {
       return new NextResponse("Unauthenticated", { status: 401 });
@@ -37,9 +37,6 @@ export async function POST(req: Request) {
       return new NextResponse("regLink is required", { status: 400 });
     }
 
-    if (!webLink) {
-      return new NextResponse("webLink is required", { status: 400 });
-    }
     if (!type) {
       return new NextResponse("Type is required", { status: 400 });
     }
@@ -58,7 +55,6 @@ export async function POST(req: Request) {
         subTitle: subTitle,
         desc: desc,
         date: new Date(),
-        webLink: webLink,
         link: {
           create: linkData.map((link: any) => ({
             name: link.name,

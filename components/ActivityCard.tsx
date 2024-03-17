@@ -1,7 +1,7 @@
 import { Activity } from "@prisma/client";
 import styles from "./activityCard.module.css";
 
-export const ActivityCard: React.FC<Activity> = (data) => {
+export const ActivityCard: React.FC<any> = (data) => {
   return (
     <>
       <div className={styles.container}>

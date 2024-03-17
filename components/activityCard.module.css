@@ -21,8 +21,8 @@
   font-weight: 700;
 }
 .imgContainer {
-  max-height: 23.75rem;
-  max-width: 23.75rem;
+  height: 23.75rem;
+  width: 23.75rem;
 }
 .img {
   width: 100%;

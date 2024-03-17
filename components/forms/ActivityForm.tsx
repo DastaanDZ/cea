@@ -57,7 +57,7 @@ export const ActivityForm: React.FC = () => {
 
     console.log(finalData);
 
-    if (photoUrl !== "" && guideline !== "") {
+    if (photoUrl !== "") {
       try {
         await axios.post("/api/activity", finalData);
         // reset();

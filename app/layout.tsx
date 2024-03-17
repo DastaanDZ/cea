@@ -47,7 +47,7 @@ export default function RootLayout({
               overflowX: "hidden",
             }}
           >
-            <NextTopLoader />
+            <NextTopLoader showSpinner={false} color="#F48FD0" />
             <ToastContainer
               position="top-right"
               autoClose={5000}

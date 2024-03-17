@@ -29,6 +29,7 @@ export const OurExperienceCard: React.FC<any> = (data) => {
               borderRadius: "0.5rem",
               objectFit: "cover",
               objectPosition: "center",
+              width: "100%",
             }}
           />
         </div>

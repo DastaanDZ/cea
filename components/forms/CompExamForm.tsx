@@ -86,7 +86,7 @@ export const CompExamForm: React.FC = () => {
         <label>Description</label>
         <input {...register("desc")} type="text" />
         {errors.desc && <p>{`${errors.desc?.message}`}</p>}
-
+        <label>WebLink</label>
         <input {...register("webLink")} type="text" />
         {errors.webLink && <p>{`${errors.webLink?.message}`}</p>}
 

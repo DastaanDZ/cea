@@ -75,7 +75,7 @@ export default async function CompExamMaterial({
                 <OfficialWebsite link={compExam?.link[2].link} />
               )}
             </button>
-            <button className={styles.materials}>
+            {/* <button className={styles.materials}>
               <div style={{ backgroundColor: "inherit" }}>
                 <MdOutlineLibraryBooks className={styles.buttonIcons} />
               </div>
@@ -88,7 +88,7 @@ export default async function CompExamMaterial({
                   />
                 )}
               </div>
-            </button>
+            </button> */}
           </div>
         </div>
       </div>

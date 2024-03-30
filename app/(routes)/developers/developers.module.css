@@ -1,0 +1,43 @@
+.cardContainer {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  max-width: 82rem;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3.125rem 0;
+  gap: 3rem;
+  width: 100%;
+}
+
+@media (max-width: 1440px) {
+  .cardContainer {
+    justify-content: space-between;
+    gap: 2rem;
+  }
+}
+@media (max-width: 1366px) {
+  .cardContainer {
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 1220px) {
+  .cardContainer {
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .cardContainer {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .cardContainer {
+    justify-content: center;
+  }
+}

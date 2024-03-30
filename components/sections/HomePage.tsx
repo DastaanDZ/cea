@@ -68,7 +68,7 @@ export const HomePage = () => {
             </div>
             <RightArrowButton
               text="Explore Teams"
-              redirectLink=""
+              redirectLink="/developers"
               textDec="underline"
             />
           </div>

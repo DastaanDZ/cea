@@ -6,6 +6,7 @@ export const developers = [
     photo: "./shivam.jpg",
     linkedin: "https://www.linkedin.com/in/shivam07042004/",
     github: "https://github.com/Shivam07042004",
+    instagram: "",
   },
   {
     id: 2,
@@ -14,6 +15,7 @@ export const developers = [
     photo: "./shivam.jpg",
     linkedin: "https://www.linkedin.com/in/shivam07042004/",
     github: "https://github.com/Shivam07042004",
+    instagram: "https://github.com/Shivam07042004",
   },
   {
     id: 3,
@@ -22,5 +24,6 @@ export const developers = [
     photo: "./shivam.jpg",
     linkedin: "https://www.linkedin.com/in/shivam07042004/",
     github: "https://github.com/Shivam07042004",
+    instagram: "",
   },
 ];

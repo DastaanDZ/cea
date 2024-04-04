@@ -16,6 +16,22 @@
   justify-content: space-between;
 }
 
+.backgroundContainer {
+  background: linear-gradient(
+    180deg,
+    rgba(30, 30, 30, 0.21) 6.76%,
+    rgba(26, 26, 26, 0.5) 32.63%,
+    rgba(18, 18, 18, 0.69) 64.74%,
+    rgba(21, 21, 21, 0.95) 93.08%
+  );
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  border-radius: 6.84px;
+  justify-content: space-between;
+}
+
 .name {
   display: flex;
   justify-content: flex-end; /* Center the name horizontally */
@@ -82,11 +98,18 @@
   .container {
     max-width: 340px;
   }
-  .imageContainer {
+  .backgroundContainer {
     width: 100% !important;
     border-radius: 6.84px;
   }
   .name {
     transform: translate(110px, 180px) rotate(-90deg);
+  }
+}
+
+@media (max-width: 320px) {
+  .container {
+    width: 90%;
+    overflow-x: hidden;
   }
 }

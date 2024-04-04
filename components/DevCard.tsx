@@ -14,7 +14,7 @@ interface DeveloperProps {
     photo: string;
     linkedin: string;
     github: string;
-    // instagram: string;
+    instagram: string;
   };
 }
 
@@ -31,30 +31,32 @@ export const DevCard: React.FC<DeveloperProps> = ({ developer }) => {
           width: "100%",
         }}
       >
-        <div className={styles.name}>{developer.name}</div>
-        <div className={styles.links}>
-          <div
-            className={styles.iconBackground}
-            onClick={() => router.push(developer.linkedin)}
-          >
-            <BiLogoLinkedin className={styles.icon} />
-          </div>
-          <div
-            className={styles.iconBackground}
-            onClick={() => router.push(developer.github)}
-          >
-            <FaGithub className={styles.icon} />
-          </div>
-          {/* {developer.instagram && (
+        <div className={styles.backgroundContainer}>
+          <div className={styles.name}>{developer.name}</div>
+          <div className={styles.links}>
             <div
               className={styles.iconBackground}
-              onClick={() => router.push(developer.instagram)}
+              onClick={() => router.push(developer.linkedin)}
             >
-              <GrInstagram className={styles.icon} />
+              <BiLogoLinkedin className={styles.icon} />
             </div>
-          )} */}
+            <div
+              className={styles.iconBackground}
+              onClick={() => router.push(developer.github)}
+            >
+              <FaGithub className={styles.icon} />
+            </div>
+            {developer.instagram && (
+              <div
+                className={styles.iconBackground}
+                onClick={() => router.push(developer.instagram)}
+              >
+                <GrInstagram className={styles.icon} />
+              </div>
+            )}
+          </div>
+          <div className={styles.title}>{developer.title}</div>
         </div>
-        <div className={styles.title}>{developer.title}</div>
       </div>
     </div>
   );

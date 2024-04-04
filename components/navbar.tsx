@@ -30,7 +30,7 @@ export const Navbar = () => {
             <a href="/">Home.</a>
             <a href="/activity">Activities.</a>
             <a href="/resources">Resources.</a>
-            <a href="/interviews">Interviews</a>
+            <a href="/interviews">Interviews.</a>
             <a href="/compExam">CompExams.</a>
           </div>
           <UserButton afterSignOutUrl="/" />
@@ -59,10 +59,10 @@ export const Navbar = () => {
           onClick={toggleMenu}
         >
           <a href="/">Home.</a>
-          <a href="/activity">Activity.</a>
+          <a href="/activity">Activities.</a>
           <a href="/resources">Resources.</a>
-          <a href="/interviews">Interviews</a>
-          <a href="/compExam">CompExam.</a>
+          <a href="/interviews">Interviews.</a>
+          <a href="/compExam">CompExams.</a>
         </div>
       </div>
     </>

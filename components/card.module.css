@@ -35,7 +35,7 @@
   /* border: 2px solid red; */
   border-radius: 0.5rem;
   width: 25rem;
-  height: 23.375rem;
+  /* height: 23.375rem; */
   z-index: 2;
   background-color: #262628;
   position: relative;
@@ -131,7 +131,7 @@
 @media (max-width: 768px) {
   .container {
     width: 21.718rem;
-    height: 20.306rem;
+    /* height: 20.306rem; */
     border-radius: 0.434rem;
   }
 

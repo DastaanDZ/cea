@@ -22,7 +22,7 @@
 }
 .imgContainer {
   height: 23.75rem;
-  width: 23.75rem;
+  /* width: 23.75rem; */
 }
 .img {
   width: 100%;
@@ -79,6 +79,11 @@
   .button {
     width: 7.6rem;
     height: 1.9rem;
+  }
+  .imgContainer {
+    height: 23.75rem;
+    object-fit: contain;
+    object-position: center;
   }
 }
 

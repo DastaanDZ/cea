@@ -1,11 +1,11 @@
 export const developers = [
   {
     id: 1,
-    name: "SHIVAM",
+    name: "VAIBHAV",
     title: "FULL STACK DEV.",
-    photo: "./shivam.jpg",
-    linkedin: "https://www.linkedin.com/in/shivam07042004/",
-    github: "https://github.com/Shivam07042004",
+    photo: "./vaibhav.jpg",
+    linkedin: "https://www.linkedin.com/in/vaibhav-gupta-9082a6203",
+    github: "https://github.com/DastaanDZ",
     instagram: "",
   },
   {

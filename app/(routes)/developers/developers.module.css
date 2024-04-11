@@ -39,5 +39,6 @@
 @media (max-width: 768px) {
   .cardContainer {
     justify-content: center;
+    gap: 2rem;
   }
 }

@@ -10,6 +10,15 @@ export const developers = [
   },
   {
     id: 2,
+    name: "PRASANT",
+    title: "FRONT END DEV.",
+    photo: "./vaibhav.jpg",
+    linkedin: "https://www.linkedin.com/in/vaibhav-gupta-9082a6203",
+    github: "https://github.com/DastaanDZ",
+    instagram: "",
+  },
+  {
+    id: 3,
     name: "SHIVAM",
     title: "FULL STACK DEV.",
     photo: "./shivam.jpg",
@@ -18,7 +27,7 @@ export const developers = [
     instagram: "",
   },
   {
-    id: 3,
+    id: 4,
     name: "SHUBHAM",
     title: "USER EXPERIENCE DESIGNER.",
     photo: "./shubham.jpg",

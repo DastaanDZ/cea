@@ -84,6 +84,7 @@
   display: flex;
   justify-content: center; /* Center the title horizontally */
   align-items: center; /* Center the title vertically */
+  text-align: center;
   background: transparent;
   width: 100%;
   font-size: 16px;
@@ -103,7 +104,7 @@
     border-radius: 6.84px;
   }
   .name {
-    transform: translate(110px, 180px) rotate(-90deg);
+    transform: translate(136px, 180px) rotate(-90deg);
   }
 }
 
@@ -111,5 +112,8 @@
   .container {
     width: 90%;
     overflow-x: hidden;
+  }
+  .name {
+    transform: translate(100px, 180px) rotate(-90deg);
   }
 }

@@ -60,7 +60,7 @@
   flex-wrap: wrap;
   justify-content: center;
 }
-.inputBtnContainer ::placeholder{
+.inputBtnContainer ::placeholder {
   background: #1a1a1a;
 }
 .infoContainer {
@@ -351,7 +351,7 @@
   .bottom ul li {
     margin-right: 1rem;
   }
-  .contactContainer{
+  .contactContainer {
     width: auto;
   }
   .contactContainer input {
@@ -367,13 +367,13 @@
   .arrow {
     font-size: 1.5rem;
   }
-  .linksContainer{
+  .linksContainer {
     gap: 1rem;
   }
-  .linksContainer p{
+  .linksContainer p {
     margin-bottom: 1.5rem;
   }
-  .linksContainer ul{
+  .linksContainer ul {
     gap: 0.5rem;
   }
 }
@@ -391,5 +391,10 @@
   }
   .bottom ul li {
     margin-right: 1rem;
+  }
+}
+@media (max-width: 400px) {
+  .container {
+    padding: 0 0;
   }
 }

@@ -13,7 +13,6 @@ export const Footer = () => {
   return (
     <>
       <div className={styles.container}>
-        <div className={styles.bg}>{/* <FooterBg /> */}</div>
         <div className={styles.infoContainer}>
           <h1 className={styles.colorText}>Civil Engineering Association</h1>
           <p>

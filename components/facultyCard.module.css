@@ -58,3 +58,27 @@
 .db img {
   background: transparent;
 }
+@media (max-width: 400px) {
+  .detailWrapper {
+    padding: 1.75rem 1.5rem;
+  }
+  .cardHeading {
+    font-size: 0.9rem;
+    gap: 2rem;
+  }
+}
+@media (max-width: 360px) {
+  .detailWrapper {
+    padding: 1.75rem 1rem;
+  }
+  .cardHeading {
+    font-size: 0.8rem;
+    gap: 1.5rem;
+  }
+}
+@media (max-width: 320px) {
+  .cardHeading {
+    font-size: 0.7rem;
+    gap: 1.5rem;
+  }
+}

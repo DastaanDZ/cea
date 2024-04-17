@@ -13,7 +13,7 @@
   transform: translateY(2rem);
   opacity: 0;
 }
-.cardDivShow{
+.cardDivShow {
   transform: translateY(0px);
   opacity: 1;
 }
@@ -24,7 +24,7 @@
   content: "";
   position: absolute;
   border-radius: 50%;
-  top: -17%;
+  top: -15%;
   left: 36%;
   z-index: -1;
   width: 142px;
@@ -117,7 +117,7 @@
     width: 29rem;
   }
   .cardDiv::before {
-    top: -16%;
+    top: -15%;
     left: 35%;
   }
 }
@@ -133,7 +133,7 @@
     width: 27.75rem;
   }
   .cardDiv::before {
-    top: -16%;
+    top: -14%;
     left: 34%;
   }
 }
@@ -142,7 +142,7 @@
     width: 23.75rem;
   }
   .cardDiv::before {
-    top: -16%;
+    top: -13%;
     left: 31%;
   }
 }
@@ -151,7 +151,7 @@
     width: 21rem;
   }
   .cardDiv::before {
-    top: -13%;
+    top: -12%;
     left: 29%;
   }
 }
@@ -160,7 +160,7 @@
     width: 19rem;
   }
   .cardDiv::before {
-    top: -13%;
+    top: -12%;
     left: 27%;
   }
   .cardPrimary {
@@ -172,7 +172,7 @@
     width: 16rem;
   }
   .cardDiv::before {
-    top: -12%;
+    top: -11%;
     left: 23%;
   }
   .cardPrimary {

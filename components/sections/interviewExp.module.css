@@ -1,5 +1,6 @@
-.container{
+.container {
   padding: 0 4rem;
+  width: 100%;
 }
 .maindiv {
   color: white;
@@ -18,7 +19,7 @@
   align-items: stretch;
   flex-wrap: wrap;
 }
-.seperator{
+.seperator {
   margin: 3rem 0;
 }
 
@@ -117,7 +118,6 @@
   }
 }
 
-
 @media (max-width: 1366px) {
   .cardholder {
     gap: 5rem;
@@ -127,7 +127,7 @@
   .cardholder {
     gap: 2rem;
   }
-  .container{
+  .container {
     padding: 0 3rem;
   }
 }
@@ -136,49 +136,48 @@
     flex-direction: column;
     gap: 10rem;
   }
-  .container{
+  .container {
     padding: 0 2rem;
   }
 }
 @media (max-width: 900px) {
-  .buttonsDiv{
+  .buttonsDiv {
     width: 100%;
   }
-  .mainDiv{
+  .mainDiv {
     width: 100%;
   }
-  .buttonDiv{
+  .buttonDiv {
     width: 100%;
   }
 }
 @media (max-width: 768px) {
-  .container{
+  .container {
     padding: 0 2rem;
   }
-  .buttonDiv{
+  .buttonDiv {
     font-size: 1.8rem;
   }
-  .buttonsDiv{
+  .buttonsDiv {
     margin-bottom: 8.8rem;
   }
 }
 
-
 @media (max-width: 550px) {
-  .container{
+  .container {
     padding: 0 1rem;
   }
-  .buttonDiv{
+  .buttonDiv {
     font-size: 1.5rem;
   }
 }
 @media (max-width: 400px) {
-  .buttonDiv{
+  .buttonDiv {
     font-size: 1.3rem;
   }
 }
 @media (max-width: 350px) {
-  .buttonDiv{
+  .buttonDiv {
     font-size: 1rem;
   }
 }

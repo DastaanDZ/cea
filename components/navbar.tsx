@@ -32,6 +32,7 @@ export const Navbar = () => {
             <a href="/resources">Resources.</a>
             <a href="/interviews">Interviews.</a>
             <a href="/compExam">CompExams.</a>
+            <a href="/faculty">Faculties.</a>
           </div>
           <UserButton afterSignOutUrl="/" />
           {/* <a href="" className={styles.mainDiv}>
@@ -63,6 +64,7 @@ export const Navbar = () => {
           <a href="/resources">Resources.</a>
           <a href="/interviews">Interviews.</a>
           <a href="/compExam">CompExams.</a>
+          <a href="/faculty">Faculties.</a>
         </div>
       </div>
     </>

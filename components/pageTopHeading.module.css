@@ -1,9 +1,12 @@
 .parentDiv {
   position: relative;
   width: 100%;
+  display: flex;
+  justify-content: center;
 }
 .imageDiv {
   position: absolute;
+  max-width: 77.625rem;
   width: 100%;
   height: 100%;
 }

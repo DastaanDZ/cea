@@ -1,3 +1,6 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import { Activity, ActivityLink } from "@prisma/client";
 import styles from "./activityContent.module.css";
 
@@ -10,6 +13,16 @@ export const ActivityContent: React.FC<ActivityContentProps> = ({
   activity,
   link,
 }) => {
+  const [isPastDeadline, setIsPastDeadline] = useState(false);
+
+  useEffect(() => {
+    if (activity && activity.deadline) {
+      const deadlineTimestamp = new Date(activity.deadline).getTime();
+      const currentTimestamp = new Date().getTime();
+      setIsPastDeadline(currentTimestamp > deadlineTimestamp);
+    }
+  }, [activity]);
+
   return (
     <>
       <div className={styles.aboutMain}>
@@ -23,7 +36,9 @@ export const ActivityContent: React.FC<ActivityContentProps> = ({
             <div className={styles.buttonDiv}>
               {/* <Link> 
               </Link> */}
-              <button className={styles.button}>Register Now</button>
+              <button className={styles.button} disabled={isPastDeadline}>
+                {isPastDeadline ? "Deadline Passed" : "Register Now"}
+              </button>
             </div>
           </div>
         </div>

@@ -11,12 +11,17 @@ import arrow from "../public/Arrow 1.png";
 import Link from "next/link";
 import { UserButton } from "@clerk/nextjs";
 
+import { useUser } from "@clerk/nextjs";
+
 export const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
 
   const toggleMenu = () => {
     setIsActive(!isActive);
   };
+
+  const { isSignedIn } = useUser();
+
   return (
     <>
       <div className={styles.hidden}></div>
@@ -34,7 +39,7 @@ export const Navbar = () => {
             <a href="/compExam">CompExams.</a>
             <a href="/faculty">Faculties.</a>
           </div>
-          <UserButton afterSignOutUrl="/" />
+          {isSignedIn && <UserButton afterSignOutUrl="/" />}
           {/* <a href="" className={styles.mainDiv}>
             <div className={styles.buttonDiv}>
               Sign In

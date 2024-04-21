@@ -20,38 +20,38 @@ import InterviewExp from "./(routes)/interviews/[interviewId]/page";
 // import Resources from "./(routes)/resources/page";
 
 export default async function Home() {
-  try {
-    // console.log("Before currentUser()");
-    let user;
-    let retryCount = 0;
+  // try {
+  //   // console.log("Before currentUser()");
+  //   let user;
+  //   let retryCount = 0;
 
-    while (!user && retryCount < 3) {
-      try {
-        user = await currentUser();
-        console.log(user?.emailAddresses[0].emailAddress);
-      } catch (error) {
-        // console.error("Error fetching user:", error);
-        retryCount++;
-        // console.log(`Retrying fetch. Attempt ${retryCount}`);
-      }
-    }
+  //   while (!user && retryCount < 3) {
+  //     try {
+  //       user = await currentUser();
+  //       console.log(user?.emailAddresses[0].emailAddress);
+  //     } catch (error) {
+  //       // console.error("Error fetching user:", error);
+  //       retryCount++;
+  //       // console.log(`Retrying fetch. Attempt ${retryCount}`);
+  //     }
+  //   }
 
-    // console.log("After currentUser(), user:", user);
-    return (
-      <>
-        <HomePage />
-        <div className={styles.seperator}></div>
-        <OurExperience />
-        <div className={styles.seperator}></div>
-        <Competitive />
-        <div className={styles.seperator}></div>
-        <Resource />
-        <div className={styles.seperator}></div>
-        <InterviewExperience />
-      </>
-    );
-  } catch (error) {
-    // console.error("Error fetching user:", error);
-    return <div>Error fetching user.</div>;
-  }
+  // console.log("After currentUser(), user:", user);
+  return (
+    <>
+      <HomePage />
+      <div className={styles.seperator}></div>
+      <OurExperience />
+      <div className={styles.seperator}></div>
+      <Competitive />
+      <div className={styles.seperator}></div>
+      <Resource />
+      <div className={styles.seperator}></div>
+      <InterviewExperience />
+    </>
+  );
+  // } catch (error) {
+  //   // console.error("Error fetching user:", error);
+  //   return <div>Error fetching user.</div>;
+  // }
 }

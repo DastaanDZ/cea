@@ -6,6 +6,7 @@ import { PageTopHeading } from "@/components/PageTopHeading";
 import { FacultyCard } from "@/components/FacultyCard";
 import { SearchBar } from "@/components/SearchBar";
 import { useResourceStore } from "@/app/store/resources";
+import { faculties } from "@/data/faculties";
 
 export default function FacultyPage() {
   const { resources, addResources } = useResourceStore();
@@ -35,9 +36,9 @@ export default function FacultyPage() {
       />
 
       <div className={styles.cardContainer}>
-        <FacultyCard />
-        <FacultyCard />
-        <FacultyCard />
+        {faculties.map((faculty) => (
+          <FacultyCard faculty={faculty} key={faculty.id} />
+        ))}
       </div>
     </div>
   );

@@ -105,8 +105,11 @@
 }
 
 .image {
-  height: 100%;
-  width: 100%;
+  width: 349px;
+  height: 349px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
   border-radius: 50%;
 }
 
@@ -252,7 +255,6 @@
     font-size: 30px ;
   }
 } */
-
 
 @media (max-width: 550px) {
   .mainContainer {

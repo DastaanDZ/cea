@@ -11,6 +11,7 @@ import { useInterviewStore } from "@/app/store/interviews";
 import { useResourceStore } from "@/app/store/resources";
 import { Resources } from "@prisma/client";
 import { Loader } from "@/components/assests/Loader";
+import { Honour } from "@/components/Honour";
 
 export default function ResourcesPage() {
   const { resources, addResources } = useResourceStore();
@@ -54,6 +55,7 @@ export default function ResourcesPage() {
           onChange={(displayData: any) => setDisplayResource(displayData)}
         />
       </div>
+      <Honour text="Anamika" />
       <div
         className={styles.cardContainer}
         style={{ width: displayResource.length === 0 ? "auto" : "100%" }}

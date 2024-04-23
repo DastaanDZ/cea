@@ -1,0 +1,117 @@
+.parentDiv {
+  margin-top: 6.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #262628;
+  height: 5rem;
+  width: 100vw;
+}
+.blankDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  padding: 0 3rem;
+  gap: 3rem;
+}
+.img {
+  width: 9.375rem;
+  height: 11.25rem;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+.textDiv {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  background: transparent;
+  padding: 1.25rem 0;
+}
+
+.colorText {
+  font-weight: 700;
+  font-size: 2rem;
+  background: linear-gradient(
+    190deg,
+    #804ced,
+    #f48fd0,
+    #804ced,
+    #f48fd0,
+    #804ced,
+    #f48fd0
+  );
+  background-size: 400%;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: animate 20s linear infinite;
+}
+@keyframes animate {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -300% 0;
+  }
+}
+.greyText {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #afafaf;
+}
+
+@media (max-width: 1024px) {
+}
+@media (max-width: 900px) {
+}
+@media (max-width: 768px) {
+  .textDiv {
+    flex-direction: column;
+  }
+  .colorText {
+    font-size: 1.4rem;
+  }
+  .greyText {
+    font-size: 0.8rem;
+  }
+  .textDiv {
+    gap: 0;
+  }
+}
+@media (max-width: 550px) {
+}
+@media (max-width: 480px) {
+  .img {
+    width: 6.25rem;
+    height: 7.5rem;
+  }
+  .colorText {
+    font-size: 1.125rem;
+  }
+  .greyText {
+    font-size: 0.625rem;
+  }
+  .textDiv {
+    gap: 0;
+  }
+  .parentDiv {
+    height: 4.375rem;
+  }
+  .blankDiv {
+    gap: 2.188rem;
+    padding: 0 1.625rem;
+  }
+}
+@media (max-width: 400px) {
+}
+@media (max-width: 360px) {
+  .colorText {
+    font-size: 1rem;
+  }
+  .greyText {
+    font-size: 0.5rem;
+  }
+}
+@media (max-width: 320px) {
+}

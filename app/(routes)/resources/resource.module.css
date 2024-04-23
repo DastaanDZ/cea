@@ -5,8 +5,8 @@
   max-width: 82rem;
   justify-content: center;
   align-items: center;
-  margin-top: 3.125rem;
-  gap: 3rem;
+  margin-top: 6.25rem;
+  gap: 3.5rem;
   width: 100%;
 }
 
@@ -41,16 +41,8 @@
 }
 
 @media (max-width: 1440px) {
-  .cardContainer {
-    justify-content: space-between;
-    gap: 2rem;
-  }
 }
 @media (max-width: 1366px) {
-  .cardContainer {
-    justify-content: center;
-    gap: 1rem;
-  }
   .selection {
     flex-direction: column-reverse;
     justify-content: center !important;
@@ -58,10 +50,6 @@
 }
 
 @media (max-width: 1220px) {
-  .cardContainer {
-    justify-content: center;
-    gap: 1rem;
-  }
 }
 
 @media (max-width: 1024px) {
@@ -69,7 +57,7 @@
     padding: 2rem 3rem;
   }
   .cardContainer {
-    justify-content: center;
+    gap: 3rem;
   }
 }
 
@@ -81,9 +69,6 @@
   }
   .container {
     padding: 2rem 2rem;
-  }
-  .cardContainer {
-    justify-content: center;
   }
 }
 

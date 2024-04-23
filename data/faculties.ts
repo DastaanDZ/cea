@@ -42,7 +42,7 @@ export const faculties = [
     photo: "./Dr. Santosh G. Thampi.jpg",
     phone: "0495-2286221",
     email: "santosh@nitc.ac.in",
-    address: "OFFSH",
+    address: "OFFSHORE",
   },
   {
     id: 6,

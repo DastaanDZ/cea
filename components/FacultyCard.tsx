@@ -10,6 +10,7 @@ interface FacultyProps {
     photo: string;
     phone: string;
     email: string;
+    address: string;
   };
 }
 
@@ -38,7 +39,7 @@ export const FacultyCard: React.FC<FacultyProps> = ({ faculty }) => {
             </p>
             <p className={styles.db}>
               <img src="db.png" alt="Department Building" />
-              <p>DB - 115</p>
+              <p>{faculty.address}</p>
             </p>
           </div>
         </div>

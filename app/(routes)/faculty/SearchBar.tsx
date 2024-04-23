@@ -34,6 +34,10 @@ export const SearchBar: React.FC<SearchBarProps> = ({ data, onChange }) => {
       const nameLowerCase = obj.name.toLowerCase();
       const queryLowerCase = query.toLowerCase();
 
+      if (queryLowerCase === "") {
+        return true;
+      }
+
       let j = 0;
 
       for (let i = 0; i < nameLowerCase.length; i++) {

@@ -53,6 +53,7 @@ export default function ResourcesPage() {
         <SearchBar
           data={resources}
           onChange={(displayData: any) => setDisplayResource(displayData)}
+          page="resource"
         />
       </div>
       <Honour text="Anamika" />

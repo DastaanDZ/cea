@@ -6,9 +6,14 @@ import { CompetitiveExam, Resources } from "@prisma/client";
 interface SearchBarProps {
   data: Resources[] | CompetitiveExam[];
   onChange: (filteredData: any[]) => void;
+  page: string;
 }
 
-export const SearchBar: React.FC<SearchBarProps> = ({ data, onChange }) => {
+export const SearchBar: React.FC<SearchBarProps> = ({
+  data,
+  onChange,
+  page,
+}) => {
   const [query, setQuery] = useState("");
   const [clicked, setClicked] = useState(false);
 
@@ -35,13 +40,23 @@ export const SearchBar: React.FC<SearchBarProps> = ({ data, onChange }) => {
   return (
     <div className={styles.searchBar}>
       <div className={styles.inputWrapper}>
-        <input
-          type="text"
-          placeholder="Search Exams"
-          name="name"
-          onChange={(e) => setQuery(e.target.value)}
-          onKeyDown={handleKeyDown}
-        />
+        {page === "resource" ? (
+          <input
+            type="text"
+            name="name"
+            placeholder="Search Resource..."
+            onChange={(e) => setQuery(e.target.value)}
+            onKeyDown={handleKeyDown}
+          />
+        ) : (
+          <input
+            type="text"
+            name="name"
+            placeholder="Search Exams..."
+            onChange={(e) => setQuery(e.target.value)}
+            onKeyDown={handleKeyDown}
+          />
+        )}
       </div>
 
       <div className={styles.iconContainer}>

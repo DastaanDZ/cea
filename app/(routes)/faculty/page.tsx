@@ -4,25 +4,12 @@ import React, { useEffect, useState } from "react";
 import styles from "@/app/(routes)/faculty/faculty.module.css";
 import { PageTopHeading } from "@/components/PageTopHeading";
 import { FacultyCard } from "@/components/FacultyCard";
-import { SearchBar } from "@/components/SearchBar";
-import { useResourceStore } from "@/app/store/resources";
 import { faculties } from "@/data/faculties";
+import { SearchBar } from "./SearchBar";
 
 export default function FacultyPage() {
-  const { resources, addResources } = useResourceStore();
-  const [displayResource, setDisplayResource] = useState(resources);
+  const [displayResource, setDisplayResource] = useState(faculties);
 
-  useEffect(() => {
-    if (resources.length === 0) {
-      addResources();
-      console.log("ADDED RESOURCES");
-    }
-  }, []);
-
-  useEffect(() => {
-    setDisplayResource(resources);
-    console.log("AFTER SETTING DISPAY RESOURCES", displayResource.length);
-  }, [resources]);
   return (
     <div className={styles.container}>
       <PageTopHeading
@@ -31,12 +18,12 @@ export default function FacultyPage() {
         subHeading="MATERIALS."
       />
       <SearchBar
-        data={resources}
+        data={faculties}
         onChange={(displayData: any) => setDisplayResource(displayData)}
       />
 
       <div className={styles.cardContainer}>
-        {faculties.map((faculty) => (
+        {displayResource.map((faculty) => (
           <FacultyCard faculty={faculty} key={faculty.id} />
         ))}
       </div>

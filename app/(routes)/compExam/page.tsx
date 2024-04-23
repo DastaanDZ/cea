@@ -35,6 +35,7 @@ export default function CompExam() {
       <SearchBar
         data={compExam}
         onChange={(displayData: any) => setDisplayCompExam(displayData)}
+        page="compExam"
       />
       <div className={styles.cardContainer}>
         {displayCompExam.length === 0 ? (

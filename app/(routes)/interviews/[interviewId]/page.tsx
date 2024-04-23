@@ -43,7 +43,7 @@ export default async function InterviewExp({
   return (
     <div className={styles.mainContainer}>
       <PageTopHeading
-        mainHeading="Get to Know about different competitive Examinations and Learn."
+        mainHeading="Get to Know about various interview experiences"
         heading="TESTIMONIALS."
         subHeading="INTERVIEW EXP."
       />

@@ -42,7 +42,7 @@ export const faculties = [
     photo: "./Dr. Santosh G. Thampi.jpg",
     phone: "0495-2286221",
     email: "santosh@nitc.ac.in",
-    address: "OFFSH",
+    address: "OFFSHORE",
   },
   {
     id: 6,
@@ -162,7 +162,7 @@ export const faculties = [
     address: "N/A",
   },
   {
-    id: 18,
+    id: 19,
     name: "Dr. Anil Kumar Dash",
     title: "Associate Professor",
     photo: "./Dr. Anil Kumar Dash.jpg",
@@ -171,7 +171,7 @@ export const faculties = [
     address: "OFFSHORE - 01",
   },
   {
-    id: 19,
+    id: 20,
     name: "Dr. Anjali Balan L",
     title: "Associate Professor",
     photo: "./Dr. Anjali Balan L.jpg",
@@ -180,7 +180,7 @@ export const faculties = [
     address: "N/A",
   },
   {
-    id: 20,
+    id: 21,
     name: "Dr. Anjana Bhasi",
     title: "Associate Professor",
     photo: "./Dr. Anjana Bhasi.jpg",
@@ -189,7 +189,7 @@ export const faculties = [
     address: "DB - 107",
   },
   {
-    id: 21,
+    id: 22,
     name: "Dr. Arunkumar R.",
     title: "Associate Professor",
     photo: "./Dr. Arunkumar R..jpg",
@@ -198,7 +198,7 @@ export const faculties = [
     address: "DB - 314",
   },
   {
-    id: 22,
+    id: 23,
     name: "Dr. Aswathy E. V.",
     title: "Associate Professor",
     photo: "./Dr. Aswathy E. V..jpg",
@@ -207,7 +207,7 @@ export const faculties = [
     address: "EE LAB",
   },
   {
-    id: 23,
+    id: 24,
     name: "Dr. B. Radhika",
     title: "Associate Professor",
     photo: "./Dr. B. Radhika.jpg",
@@ -216,7 +216,7 @@ export const faculties = [
     address: "N/A",
   },
   {
-    id: 24,
+    id: 25,
     name: "Dr. Bhaskar S.",
     title: "Associate Professor",
     photo: "./Dr. Bhaskar S.jpg",
@@ -225,7 +225,7 @@ export const faculties = [
     address: "N/A",
   },
   {
-    id: 25,
+    id: 26,
     name: "Dr. Chandru P.",
     title: "Associate Professor",
     photo: "./Dr. Chandru P..jpg",
@@ -234,7 +234,7 @@ export const faculties = [
     address: "N/A",
   },
   {
-    id: 26,
+    id: 27,
     name: "Dr. Hillol Chakravarty",
     title: "Associate Professor",
     photo: "./Dr. Hillol Chakravarty.jpg",
@@ -243,7 +243,7 @@ export const faculties = [
     address: "CTR LAB",
   },
   {
-    id: 27,
+    id: 28,
     name: "Dr. Jayachandran K.",
     title: "Associate Professor",
     photo: "./Dr. Jayachandran K..jpg",
@@ -252,7 +252,7 @@ export const faculties = [
     address: "OLD CC",
   },
   {
-    id: 28,
+    id: 29,
     name: "Dr. K. V. Anand",
     title: "Associate Professor",
     photo: "./Dr. K. V. Anand.jpg",
@@ -261,7 +261,7 @@ export const faculties = [
     address: "OFFSHORE - 01",
   },
   {
-    id: 29,
+    id: 30,
     name: "Dr. M Abdul Akbar",
     title: "Associate Professor",
     photo: "./Dr. M Abdul Akbar.jpg",
@@ -270,7 +270,7 @@ export const faculties = [
     address: "DB - 109",
   },
   {
-    id: 30,
+    id: 31,
     name: "Dr. M. Sivakumar",
     title: "Assistant Professor Gr. I",
     photo: "./Dr. M. Sivakumar.jpg",
@@ -279,7 +279,7 @@ export const faculties = [
     address: "CTR - 03",
   },
   {
-    id: 31,
+    id: 32,
     name: "Dr. Madhavan K.",
     title: "Assistant Professor",
     photo: "./Dr. Madhavan K..jpg",
@@ -288,7 +288,7 @@ export const faculties = [
     address: "DB - 314",
   },
   {
-    id: 32,
+    id: 33,
     name: "Dr. Mini Remanan",
     title: "Assistant Professor",
     photo: "./Dr. Mini Remanan.jpg",
@@ -297,7 +297,7 @@ export const faculties = [
     address: "DB - 111",
   },
   {
-    id: 33,
+    id: 34,
     name: "Dr. Muhamed Safeer Pandikkadavath",
     title: "Assistant Professor",
     photo: "./Dr. Muhamed Safeer Pandikkadavath.jpg",
@@ -306,7 +306,7 @@ export const faculties = [
     address: "DB - 113",
   },
   {
-    id: 34,
+    id: 35,
     name: "Dr. Munavar Fairooz C.",
     title: "Assistant Professor",
     photo: "./Dr. Munavar Fairooz C..jpg",
@@ -315,7 +315,7 @@ export const faculties = [
     address: "N/A",
   },
   {
-    id: 35,
+    id: 36,
     name: "Dr. Nishant Mukund Pawar",
     title: "Assistant Professor",
     photo: "./Dr. Nishant Mukund Pawar.jpg",
@@ -324,7 +324,7 @@ export const faculties = [
     address: "DB - 107",
   },
   {
-    id: 36,
+    id: 37,
     name: "Dr. Prateek Negi",
     title: "Assistant Professor",
     photo: "./Dr. Prateek Negi.jpg",
@@ -333,7 +333,7 @@ export const faculties = [
     address: "DB - 109",
   },
   {
-    id: 37,
+    id: 38,
     name: "Dr. Prethiv Kumar R.",
     title: "Assistant Professor",
     photo: "./Dr. Prethiv Kumar R..jpg",
@@ -342,7 +342,7 @@ export const faculties = [
     address: "N/A",
   },
   {
-    id: 38,
+    id: 39,
     name: "Dr. Renjitha Mary Varghese",
     title: "Assistant Professor",
     photo: "./Dr. Renjitha Mary Varghese.jpg",
@@ -351,7 +351,7 @@ export const faculties = [
     address: "OLD CC",
   },
   {
-    id: 39,
+    id: 40,
     name: "Dr. Resmi S. R.",
     title: "Assistant Professor",
     photo: "./Dr. Resmi S. R..jpg",
@@ -360,7 +360,7 @@ export const faculties = [
     address: "N/A",
   },
   {
-    id: 40,
+    id: 41,
     name: "Dr. Rohan Bhasker",
     title: "Assistant Professor",
     photo: "./Dr. Rohan Bhasker.jpg",
@@ -369,7 +369,7 @@ export const faculties = [
     address: "DB - 113",
   },
   {
-    id: 41,
+    id: 42,
     name: "Dr. S K. Pramada",
     title: "Assistant Professor",
     photo: "./Dr. S K. Pramada.jpg",
@@ -378,7 +378,7 @@ export const faculties = [
     address: "DB - 111",
   },
   {
-    id: 42,
+    id: 43,
     name: "Dr. Seelam Naga Poojitha",
     title: "Assistant Professor",
     photo: "./Dr. Seelam Naga Poojitha.jpg",
@@ -387,7 +387,7 @@ export const faculties = [
     address: "N/A",
   },
   {
-    id: 43,
+    id: 44,
     name: "Dr. Seethalakshmi P.",
     title: "Assistant Professor",
     photo: "./Dr. Seethalakshmi P..jpg",
@@ -396,7 +396,7 @@ export const faculties = [
     address: "GE LAV",
   },
   {
-    id: 44,
+    id: 45,
     name: "Dr. Yogeshwar V. N.",
     title: "Assistant Professor",
     photo: "./Dr. Yogeshwar Vijaykumar Navandar.jpg",
@@ -405,7 +405,7 @@ export const faculties = [
     address: "CTR - 02",
   },
   {
-    id: 45,
+    id: 46,
     name: "Ms. Reesha Bharath K.",
     title: "Assistant Professor",
     photo: "./Ms. Reesha Bharath K..jpg",

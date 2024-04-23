@@ -78,9 +78,11 @@ export const SearchBar: React.FC<SearchBarProps> = ({ data, onChange }) => {
       </div>
 
       <div className={styles.iconContainer}>
-        <CiFilter
+        <img
           className={styles.icons}
           onClick={() => setClicked(!clicked)}
+          src="/search.png"
+          alt=""
         />
       </div>
     </div>

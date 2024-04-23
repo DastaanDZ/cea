@@ -21,11 +21,9 @@
   width: 31.8rem;
 }
 
-.inputWrapper input{
+.inputWrapper input {
   height: 100%;
 }
-
-
 
 .inputContainer {
   display: flex;
@@ -44,7 +42,7 @@
 
 .iconContainer {
   display: flex;
-  border-radius: 0.156rem;
+  border-radius: 0.25rem;
   justify-content: center;
   align-items: center;
   height: 4.125rem;
@@ -53,8 +51,8 @@
 }
 
 .icons {
-  height: 100%;
-  width: 100%;
+  height: 1.7rem;
+  width: 1.7rem;
   color: #afafaf;
   background-color: #262628;
 }
@@ -86,7 +84,7 @@
   }
 }
 
-@media( max-width: 1024px){
+@media (max-width: 1024px) {
   .inputWrapper {
     padding: 0.5rem 1.4rem 0.5rem 1.4rem;
   }
@@ -121,7 +119,6 @@
     padding: 0.5rem 1rem 0.5rem 1rem;
   }
 }
-
 
 @media (max-width: 480px) {
   .searchBar {

@@ -43,3 +43,8 @@
     gap: 5rem;
   }
 }
+@media (max-width: 480px) {
+  .maindiv {
+    gap: 2rem;
+  }
+}

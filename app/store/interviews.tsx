@@ -19,15 +19,15 @@ export const useInterviewStore = create<InterviewStore>((set) => ({
         throw new Error("Failed to fetch data");
       }
 
-      const data: InterviewExp[] = await res.json(); // Corrected: invoke res.json()
-      var sortedInterviews = data.sort(
-        (a: any, b: any) => parseFloat(b.package) - parseFloat(a.package)
-      );
+      const data: InterviewExp[] = await res.json();
+      // var sortedInterviews = data.sort(
+      //   (a: any, b: any) => parseFloat(b.package) - parseFloat(a.package)
+      // );
 
-      var sortedTwoInterviews = sortedInterviews.slice(0, 2);
+      var sortedTwoInterviews = data.slice(0, 2);
 
       set({
-        interviews: sortedInterviews,
+        interviews: data,
         twoInterviews: sortedTwoInterviews,
       });
     } catch (error) {

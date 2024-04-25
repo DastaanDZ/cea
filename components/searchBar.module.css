@@ -48,6 +48,7 @@
   height: 4.125rem;
   width: 4.125rem;
   background-color: #262628;
+  cursor: pointer;
 }
 
 .icons {
@@ -102,10 +103,6 @@
   .iconContainer {
     height: 3rem;
     width: 3rem;
-  }
-  .icons {
-    height: 100%;
-    width: 100%;
   }
   .inputWrapper {
     padding: 0.5rem 1.2rem 0.5rem 1.2rem;

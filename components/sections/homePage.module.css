@@ -175,6 +175,7 @@
   display: flex;
   position: relative;
   text-decoration: none;
+  cursor: pointer;
 }
 .buttonDiv {
   color: black;

@@ -59,13 +59,11 @@ export const SearchBar: React.FC<SearchBarProps> = ({
         )}
       </div>
 
-      <div className={styles.iconContainer}>
-        <img
-          className={styles.icons}
-          onClick={() => setClicked(!clicked)}
-          src="/search.png"
-          alt=""
-        />
+      <div
+        className={styles.iconContainer}
+        onClick={() => setClicked(!clicked)}
+      >
+        <img className={styles.icons} src="/search.png" alt="" />
       </div>
     </div>
   );

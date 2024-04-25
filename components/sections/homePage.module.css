@@ -293,7 +293,7 @@
 @media (max-width: 1220px) {
   .gridBackground {
     width: 31.806rem;
-    height: 22.575rem;
+    height: 22.61rem;
     background-size: 3.52rem 3.22rem;
   }
   .headingDiv h1,
@@ -348,8 +348,8 @@
     flex-direction: column;
   }
   .gridBackground {
-    width: 28.806rem;
-    height: 19.575rem;
+    width: 28.688rem;
+    height: 19.556rem;
     background-size: 3.18rem 2.78rem;
   }
   .cubeDiv {
@@ -374,8 +374,8 @@
     flex-direction: column;
   }
   .gridBackground {
-    width: 26.806rem;
-    height: 17.575rem;
+    width: 26.688rem;
+    height: 17.556rem;
     background-size: 2.96rem 2.5rem;
   }
   .cubeDiv {
@@ -404,17 +404,17 @@
     padding: 0rem 2rem;
   }
   .gridBackground {
-    width: 24.829rem;
+    width: 24.813rem;
     height: 18.759rem;
     background-size: 2.75rem 2.67rem;
   }
-  .pageDiv::after{
+  .pageDiv::after {
     box-shadow: -2rem 6rem 9rem 7rem #d9d9d933;
   }
 }
 @media (max-width: 480px) {
   .gridBackground {
-    width: 24.829rem;
+    width: 24.813rem;
     height: 18.759rem;
     background-size: 2.75rem 2.67rem;
   }
@@ -446,8 +446,8 @@
 }
 @media (max-width: 400px) {
   .gridBackground {
-    width: 18.829rem;
-    height: 12.759rem;
+    width: 18.813rem;
+    height: 12.77rem;
     background-size: 2.08rem 1.82rem;
   }
   .headingDiv h1,
@@ -464,8 +464,8 @@
 }
 @media (max-width: 360px) {
   .gridBackground {
-    width: 18.829rem;
-    height: 12.759rem;
+    width: 18.813rem;
+    height: 12.77rem;
   }
   .topCubes {
     width: 125%;
@@ -482,7 +482,7 @@
 @media (max-width: 320px) {
   .gridBackground {
     width: 16.829rem;
-    height: 10.759rem;
+    height: 10.763rem;
     background-size: 1.87rem 1.53rem;
   }
   .topCubes {
